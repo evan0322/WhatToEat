@@ -97,7 +97,7 @@
         <!--Title-->
         <scene sceneID="2q2-XE-JLa">
             <objects>
-                <viewController id="yB8-hs-8nw" sceneMemberID="viewController">
+                <viewController id="yB8-hs-8nw" customClass="AddFoodViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uZp-KX-2ef"/>
                         <viewControllerLayoutGuide type="bottom" id="8D0-27-3Yb"/>
