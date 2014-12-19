@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1070" y="294"/>
         </scene>
-        <!--Title-->
+        <!--Food List-->
         <scene sceneID="dMU-7T-8Mr">
             <objects>
-                <tableViewController id="t2r-hl-0Fn" sceneMemberID="viewController">
+                <tableViewController id="t2r-hl-0Fn" customClass="FoodListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7kA-vg-dtj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,8 +81,12 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="zON-oT-arJ">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="0cK-Hn-3Sh"/>
+                    <navigationItem key="navigationItem" title="Food List" id="zON-oT-arJ">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="0cK-Hn-3Sh">
+                            <connections>
+                                <segue destination="pki-j2-kSA" kind="presentation" id="SkK-8e-tbR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -91,9 +95,28 @@
             <point key="canvasLocation" x="1070" y="1020"/>
         </scene>
         <!--Title-->
+        <scene sceneID="2q2-XE-JLa">
+            <objects>
+                <viewController id="yB8-hs-8nw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZp-KX-2ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="8D0-27-3Yb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q4l-nb-0Yr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="fED-MP-W72"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAs-up-m9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="1020"/>
+        </scene>
+        <!--Spin out your food!-->
         <scene sceneID="GjA-g8-e7F">
             <objects>
-                <viewController id="ay9-Oa-9bI" sceneMemberID="viewController">
+                <viewController id="ay9-Oa-9bI" customClass="SpinViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2OD-xb-kJZ"/>
                         <viewControllerLayoutGuide type="bottom" id="l5u-ta-HOk"/>
@@ -124,7 +147,7 @@
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Wlj-47-cyF"/>
+                    <navigationItem key="navigationItem" title="Spin out your food!" id="Wlj-47-cyF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-wm-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,6 +170,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="516-Br-c3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="378.75" y="294.71830985915483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0a-d6-9gT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pki-j2-kSA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OhD-BY-dC4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yB8-hs-8nw" kind="relationship" relationship="rootViewController" id="kSO-tf-Xss"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRs-BW-ss8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="1020"/>
         </scene>
     </scenes>
 </document>
