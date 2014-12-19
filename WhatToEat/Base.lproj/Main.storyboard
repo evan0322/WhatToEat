@@ -21,6 +21,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
                                 <rect key="frame" x="180" y="138" width="240" height="128"/>
@@ -56,7 +59,38 @@
             </objects>
             <point key="canvasLocation" x="1070" y="294"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
+        <scene sceneID="dMU-7T-8Mr">
+            <objects>
+                <tableViewController id="t2r-hl-0Fn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7kA-vg-dtj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WTEFoodCell" id="TJ6-s8-uDR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJ6-s8-uDR" id="xm2-fL-wrZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t2r-hl-0Fn" id="yB0-1v-BTI"/>
+                            <outlet property="delegate" destination="t2r-hl-0Fn" id="vfD-Dr-c1s"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="zON-oT-arJ">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="0cK-Hn-3Sh"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP2-Wy-RE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="1020"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="GjA-g8-e7F">
             <objects>
                 <viewController id="ay9-Oa-9bI" sceneMemberID="viewController">
@@ -90,6 +124,7 @@
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Wlj-47-cyF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-wm-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
