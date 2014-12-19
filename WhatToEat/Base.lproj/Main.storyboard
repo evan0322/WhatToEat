@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yXL-tB-RXm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yXL-tB-RXm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,53 +13,87 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vN-wU-8bH">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco">
+                                <rect key="frame" x="277" y="446" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
+                                <rect key="frame" x="180" y="138" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="240" id="BlK-HY-xta"/>
+                                    <constraint firstAttribute="height" priority="750" constant="128" id="YW9-QR-ash"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC">
+                                <rect key="frame" x="277" y="366" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Oc3-P1-qLL" kind="push" id="x8B-ca-1ry"/>
+                                    <segue destination="ay9-Oa-9bI" kind="show" id="Szu-Qk-t3C"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="100" id="AQH-Lb-PRs"/>
+                            <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="Wcs-qt-rRL"/>
+                            <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="Wnb-Ou-l34"/>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="50" id="eBZ-TY-y70"/>
+                            <constraint firstAttribute="centerX" secondItem="39A-vb-Q79" secondAttribute="centerX" id="mkf-tW-xd8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="278.99999999999994"/>
+            <point key="canvasLocation" x="1070" y="294"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="56V-QX-yuK">
+        <!--View Controller-->
+        <scene sceneID="GjA-g8-e7F">
             <objects>
-                <tableViewController id="Oc3-P1-qLL" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XsK-hZ-d2z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="ay9-Oa-9bI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2OD-xb-kJZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5u-ta-HOk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GhZ-Yd-0Ra">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-oh-I4A">
+                                <rect key="frame" x="0.0" y="97" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="600" id="NbD-ts-aXo"/>
+                                    <constraint firstAttribute="height" priority="750" constant="170" id="fvW-b8-vI2"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8">
+                                <rect key="frame" x="277" y="363" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yek-IG-htQ">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yek-IG-htQ" id="I9x-mz-zXv">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Oc3-P1-qLL" id="zEN-fI-DPH"/>
-                            <outlet property="delegate" destination="Oc3-P1-qLL" id="Zpy-7Z-5HK"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="YZX-2C-hh6"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iVI-4r-3cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="WMV-oh-I4A" firstAttribute="top" secondItem="2OD-xb-kJZ" secondAttribute="bottom" constant="29" id="OeS-HW-81i"/>
+                            <constraint firstAttribute="centerX" secondItem="7L9-ml-oX8" secondAttribute="centerX" id="fln-9e-zOv"/>
+                            <constraint firstItem="7L9-ml-oX8" firstAttribute="top" secondItem="WMV-oh-I4A" secondAttribute="bottom" constant="100" id="zhv-9S-fzB"/>
+                            <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-wm-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="279.99999999999994"/>
+            <point key="canvasLocation" x="1784" y="294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2aw-Hg-N9i">
@@ -77,12 +111,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="516-Br-c3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="278.99999999999994"/>
+            <point key="canvasLocation" x="378.75" y="294.71830985915483"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
