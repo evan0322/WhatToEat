@@ -10,7 +10,6 @@
 		B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A21401A44C6B60071B570 /* SpinViewController.m */; };
 		B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ABB1A44C72100F62DC2 /* MainViewController.m */; };
 		B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */; };
-		B54B8AC51A44C99200F62DC2 /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC41A44C99200F62DC2 /* AddFoodViewController.m */; };
 		B5EF1F2E1A28329A00B3E379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F2D1A28329A00B3E379 /* main.m */; };
 		B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F301A28329A00B3E379 /* AppDelegate.m */; };
 		B5EF1F341A28329A00B3E379 /* WhatToEat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F321A28329A00B3E379 /* WhatToEat.xcdatamodeld */; };
@@ -38,8 +37,6 @@
 		B54B8ABB1A44C72100F62DC2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = controllers/MainViewController.m; sourceTree = "<group>"; };
 		B54B8AC01A44C8B700F62DC2 /* FoodListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodListTableViewController.h; path = controllers/FoodListTableViewController.h; sourceTree = "<group>"; };
 		B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodListTableViewController.m; path = controllers/FoodListTableViewController.m; sourceTree = "<group>"; };
-		B54B8AC31A44C99200F62DC2 /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodViewController.h; path = controllers/AddFoodViewController.h; sourceTree = "<group>"; };
-		B54B8AC41A44C99200F62DC2 /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodViewController.m; path = controllers/AddFoodViewController.m; sourceTree = "<group>"; };
 		B5EF1F281A28329A00B3E379 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EF1F2C1A28329A00B3E379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5EF1F2D1A28329A00B3E379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,8 +80,6 @@
 				B54A21401A44C6B60071B570 /* SpinViewController.m */,
 				B54B8AC01A44C8B700F62DC2 /* FoodListTableViewController.h */,
 				B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */,
-				B54B8AC31A44C99200F62DC2 /* AddFoodViewController.h */,
-				B54B8AC41A44C99200F62DC2 /* AddFoodViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,7 +247,6 @@
 			files = (
 				B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */,
 				B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */,
-				B54B8AC51A44C99200F62DC2 /* AddFoodViewController.m in Sources */,
 				B5EF1F2E1A28329A00B3E379 /* main.m in Sources */,
 				B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */,
 				B5EF1F371A28329A00B3E379 /* ViewController.m in Sources */,
