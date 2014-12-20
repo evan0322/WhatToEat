@@ -138,13 +138,13 @@
         <!--Add New Food-->
         <scene sceneID="ssh-rU-hD5">
             <objects>
-                <tableViewController id="6m6-ak-zrP" sceneMemberID="viewController">
+                <tableViewController id="6m6-ak-zrP" customClass="AddFoodTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a2w-BG-3Wv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddFoodControllerCell" id="ksC-Yo-Hk8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddFoodtControllerNameCell" id="ksC-Yo-Hk8">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ksC-Yo-Hk8" id="JkJ-kP-lZi">
                                     <autoresizingMask key="autoresizingMask"/>
