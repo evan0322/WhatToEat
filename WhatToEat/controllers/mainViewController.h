@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mainViewController : UIViewController
+@interface MainViewController : UIViewController
+
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic,strong) NSPersistentStoreCoordinator* persistentStoreCoordinator;
 
 @end
