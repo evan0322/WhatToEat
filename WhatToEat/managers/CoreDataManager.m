@@ -83,12 +83,16 @@ FoodInfo *foodInfo;
 
 - (void) clearDataForEntity:(NSString *)entity
 {
+    NSError *error;
     if (!managedObjectContext) {
         return;
     }
     NSArray *deletingObjects = [self getFoodInfosForEntity:entity];
     for (FoodInfo *deletingObject in deletingObjects){
         [managedObjectContext deleteObject:deletingObject];
+    }
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't delete: %@", [error localizedDescription]);
     }
 }
 
