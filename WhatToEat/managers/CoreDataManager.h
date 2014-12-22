@@ -19,9 +19,10 @@
 - (BOOL)createContextForEntity: (NSString *)entity;
 - (void)setValue:(id)value forKey:(NSString *)key;
 - (void)getValue:(id)value forKey:(NSString *)key;
+- (NSArray *) getFoodInfos;
 
 @property (nonatomic,readwrite) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic,readwrite) NSPersistentStoreCoordinator* persistentStoreCoordinator;
-@property (nonatomic,strong) FoodInfo *managedObject;
+@property (nonatomic,strong) FoodInfo *foodInfo;
 
 @end

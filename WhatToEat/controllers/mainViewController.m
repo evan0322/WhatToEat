@@ -22,10 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CoreDataManager *dataManager = [CoreDataManager sharedInstance];
-    [dataManager createContextForEntity:@"FoodInfo"];
-    [dataManager setValue:@"pizza" forKey:@"name"];
-    
     // Do any additional setup after loading the view.
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import "FoodListTableViewController.h"
+#import "CoreDataManager.h"
+#import "FoodInfo.h"
 
 @interface FoodListTableViewController ()
 
@@ -14,14 +16,27 @@
 
 @implementation FoodListTableViewController
 
+NSArray* foodInfos;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[CoreDataManager sharedInstance] createContextForEntity:@"FoodInfo"];
+    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
+    for (FoodInfo *foodInfo in foodInfos) {
+        NSLog(@"list print %@",foodInfo.name);
+    }
     
+    [self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{  
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +47,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [foodInfos count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WTEFoodCell" forIndexPath:indexPath];
+    FoodInfo *foodInfo = [foodInfos objectAtIndex:indexPath.row];
+    cell.textLabel.text = foodInfo.name;
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

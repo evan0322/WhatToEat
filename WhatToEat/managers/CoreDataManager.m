@@ -12,7 +12,7 @@
 
 NSManagedObjectContext* managedObjectContext;
 NSPersistentStoreCoordinator* persistentStoreCoordinator;
-FoodInfo *managedObject;
+FoodInfo *foodInfo;
 
 #pragma mark -
 #pragma mark Singleton
@@ -37,15 +37,15 @@ FoodInfo *managedObject;
 {
     id delegate = [[UIApplication sharedApplication] delegate];
     managedObjectContext = [delegate managedObjectContext];
-    managedObject = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:self.managedObjectContext];
-
+    foodInfo = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedObjectContext];
+    foodInfo.name = @"name";
     return YES;
 }
 
 
 - (void) setValue:(NSString *)value forKey:(NSString *)key
 {
-    [managedObject setValue:value forKey:key];
+    [foodInfo setValue:value forKey:key];
     NSError *error;
     if (![managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
@@ -59,8 +59,18 @@ FoodInfo *managedObject;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"FoodInfo" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *info in fetchedObjects) {
-        NSLog(@"name: %@",[info valueForKey:key]);
+    for (FoodInfo *info in fetchedObjects) {
+        NSLog(@"name: %@",info.name);
     };
+}
+
+- (NSArray *) getFoodInfos
+{
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FoodInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
 }
 @end
