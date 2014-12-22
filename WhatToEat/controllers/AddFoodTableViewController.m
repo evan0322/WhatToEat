@@ -50,7 +50,16 @@
     return cell;
 }
 
+- (IBAction)save:(id)sender
+{
+    NSLog(@"save is pressed");
+}
 
+- (IBAction)cancel:(id)sender
+{
+    NSLog(@"cancel is pressed");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

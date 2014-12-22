@@ -10,4 +10,8 @@
 
 @interface AddFoodTableViewController : UITableViewController
 
+
+- (IBAction)save:(id)sender;
+- (IBAction)cancel:(id)sender;
+
 @end

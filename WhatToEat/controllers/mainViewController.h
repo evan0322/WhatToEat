@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataManager.h"
+#import <CoreData/CoreData.h>
 
 @interface MainViewController : UIViewController
 
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
-@property (nonatomic,strong) NSPersistentStoreCoordinator* persistentStoreCoordinator;
+
 
 @end

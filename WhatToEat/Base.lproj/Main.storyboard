@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yXL-tB-RXm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yXL-tB-RXm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco">
-                                <rect key="frame" x="277" y="446" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="249" y="446" width="103" height="30"/>
+                                <state key="normal" title="Add New Food">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -34,9 +34,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC">
-                                <rect key="frame" x="277" y="366" width="46" height="30"/>
+                                <rect key="frame" x="274" y="366" width="53" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Choose">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -159,7 +159,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEj-Oq-InU">
-                                            <rect key="frame" x="18" y="10" width="50.5" height="20.5"/>
+                                            <rect key="frame" x="18" y="10" width="51" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="70" id="5DA-Hd-obJ"/>
                                             </constraints>
@@ -184,7 +184,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add New Food" id="3wy-YL-8cf">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZTZ-6y-wUE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="QgN-jX-B80">
+                            <connections>
+                                <action selector="cancel:" destination="6m6-ak-zrP" id="tor-v6-Erp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZTZ-6y-wUE">
+                            <connections>
+                                <action selector="save:" destination="6m6-ak-zrP" id="NDE-mr-07Q"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE2-g7-TGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
