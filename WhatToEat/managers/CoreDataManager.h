@@ -17,9 +17,10 @@
 + (CoreDataManager*)sharedInstance;
 
 - (BOOL)createContextForEntity: (NSString *)entity;
-- (void)setValue:(id)value forKey:(NSString *)key;
-- (void)getValue:(id)value forKey:(NSString *)key;
-- (NSArray *) getFoodInfos;
+- (void)setValue:(id)value forEntity:(NSString *)entity forKey:(NSString *)key;
+//- (void)getValue:(id)value forKey:(NSString *)key;
+- (NSArray *)getFoodInfosForEntity:(NSString *)entity;
+- (void)clearDataForEntity:(NSString *)entity;
 
 @property (nonatomic,readwrite) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic,readwrite) NSPersistentStoreCoordinator* persistentStoreCoordinator;

@@ -20,18 +20,11 @@ NSArray* foodInfos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[CoreDataManager sharedInstance] createContextForEntity:@"FoodInfo"];
-    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
+    foodInfos = [[CoreDataManager sharedInstance] getFoodInfosForEntity:@"FoodInfo"];
     for (FoodInfo *foodInfo in foodInfos) {
         NSLog(@"list print %@",foodInfo.name);
     }
-    
     [self.tableView reloadData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -66,6 +59,11 @@ NSArray* foodInfos;
 }
 
 
+- (IBAction)clear:(id)sender
+{
+    [[CoreDataManager sharedInstance] clearDataForEntity:@"FoodInfo"];
+    [self.tableView reloadData];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

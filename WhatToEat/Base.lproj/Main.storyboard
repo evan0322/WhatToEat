@@ -89,9 +89,17 @@
                             <outlet property="delegate" destination="t2r-hl-0Fn" id="vfD-Dr-c1s"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="JTr-dp-CKQ">
+                            <connections>
+                                <action selector="clear:" destination="t2r-hl-0Fn" id="5Fy-5x-eVh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="cJN-hX-SLL"/>
+                        <barButtonItem systemItem="edit" id="WzW-yW-S8z"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Food List" id="zON-oT-arJ">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="0cK-Hn-3Sh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0cK-Hn-3Sh">
                             <connections>
                                 <segue destination="oIv-qX-Mrc" kind="presentation" id="mFr-q1-Az4"/>
                             </connections>
@@ -211,13 +219,16 @@
         <!--Navigation Controller-->
         <scene sceneID="2aw-Hg-N9i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yXL-tB-RXm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="yXL-tB-RXm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q7V-jB-0AP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iIC-Id-6Xr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ite-Qz-caW"/>
                     </connections>

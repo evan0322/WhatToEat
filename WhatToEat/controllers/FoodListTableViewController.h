@@ -10,4 +10,6 @@
 
 @interface FoodListTableViewController : UITableViewController
 
+- (IBAction)clear:(id)sender;
+
 @end

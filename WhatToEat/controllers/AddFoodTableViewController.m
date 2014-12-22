@@ -61,8 +61,7 @@
     CoreDataManager *dataManager = [CoreDataManager sharedInstance];
     [dataManager createContextForEntity:@"FoodInfo"];
     NSString *foodName = self.nameField.text;
-    [dataManager setValue:foodName forKey:@"name"];
-    [dataManager getValue:foodName forKey:@"name"];
+    [dataManager setValue:foodName forEntity:@"FoodInfo" forKey:@"name"];
 }
 
 - (IBAction)cancel:(id)sender

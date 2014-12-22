@@ -26,7 +26,7 @@ FoodInfo *foodInfo;
     return _sharedObject;
 }
 
-- (id)init:(NSString *) entity
+- (id)init
 {
     self = [super init];
     return self;
@@ -38,13 +38,17 @@ FoodInfo *foodInfo;
     id delegate = [[UIApplication sharedApplication] delegate];
     managedObjectContext = [delegate managedObjectContext];
     foodInfo = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedObjectContext];
-    foodInfo.name = @"name";
     return YES;
 }
 
 
-- (void) setValue:(NSString *)value forKey:(NSString *)key
+- (void) setValue:(NSString *)value forEntity:(NSString *)entity forKey:(NSString *)key
 {
+    if (!managedObjectContext) {
+        id delegate = [[UIApplication sharedApplication] delegate];
+        managedObjectContext = [delegate managedObjectContext];
+        foodInfo = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedObjectContext];
+    }
     [foodInfo setValue:value forKey:key];
     NSError *error;
     if (![managedObjectContext save:&error]) {
@@ -52,6 +56,7 @@ FoodInfo *foodInfo;
     }
 }
 
+/*
 - (void) getValue:(NSString *)value forKey:(NSString *)key
 {
     NSError *error;
@@ -62,15 +67,34 @@ FoodInfo *foodInfo;
     for (FoodInfo *info in fetchedObjects) {
         NSLog(@"name: %@",info.name);
     };
-}
+}*/
 
-- (NSArray *) getFoodInfos
+
+
+- (NSArray *) getFoodInfosForEntity:(NSString *)entity
 {
     NSError *error;
+    if (!managedObjectContext) {
+        id delegate = [[UIApplication sharedApplication] delegate];
+        managedObjectContext = [delegate managedObjectContext];
+        foodInfo = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedObjectContext];
+    }
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FoodInfo" inManagedObjectContext:managedObjectContext];
-    [fetchRequest setEntity:entity];
+    NSEntityDescription *entityDiscription = [NSEntityDescription entityForName:@"FoodInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entityDiscription];
     NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     return fetchedObjects;
 }
+
+- (void) clearDataForEntity:(NSString *)entity
+{
+    if (!managedObjectContext) {
+        return;
+    }
+    NSArray *deletingObjects = [self getFoodInfosForEntity:entity];
+    for (FoodInfo *deletingObject in deletingObjects){
+        [managedObjectContext deleteObject:deletingObject];
+    }
+}
+
 @end
