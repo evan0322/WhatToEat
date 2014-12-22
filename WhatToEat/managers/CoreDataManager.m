@@ -49,11 +49,13 @@
 
 - (void) getValue:(NSString *)value forKey:(NSString *)key
 {
-    [self.managedObject setValue:value forKey:key];
     NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't get: %@", [error localizedDescription]);
-    }
-    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Food" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects) {
+        NSLog(@"name: %@",[info valueForKey:key]);
+    };
 }
 @end

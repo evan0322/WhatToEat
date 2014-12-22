@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataManager.h"
 
-@interface AddFoodTableViewController : UITableViewController
+@interface AddFoodTableViewController : UITableViewController {
+    UITextField *nameField;
+}
 
 
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 @end

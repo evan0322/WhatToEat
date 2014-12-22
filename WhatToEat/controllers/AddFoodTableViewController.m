@@ -13,6 +13,8 @@
 @end
 
 @implementation AddFoodTableViewController
+@synthesize nameField = _nameField;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,16 +45,24 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddFoodtControllerNameCell" forIndexPath:indexPath];
+    if (indexPath.row == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddFoodtControllerNameCell" forIndexPath:indexPath];
+        self.nameField = (UITextField *) [cell.contentView viewWithTag:101];
+        return cell;
+    }
     
     // Configure the cell...
     
-    return cell;
+    return nil;
 }
 
 - (IBAction)save:(id)sender
 {
-    NSLog(@"save is pressed");
+    CoreDataManager *dataManager = [CoreDataManager sharedInstance];
+    [dataManager createContextForEntity:@"Food"];
+    NSString *foodName = self.nameField.text;
+    [dataManager setValue:foodName forKey:@"name"];
+    [dataManager getValue:foodName forKey:@"name"];
 }
 
 - (IBAction)cancel:(id)sender
