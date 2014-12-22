@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
+#import "FoodInfo.h"
 
-@interface CoreDataManager : NSObject
+@interface CoreDataManager : NSObject 
 
 
 + (CoreDataManager*)sharedInstance;
@@ -19,8 +20,8 @@
 - (void)setValue:(id)value forKey:(NSString *)key;
 - (void)getValue:(id)value forKey:(NSString *)key;
 
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
-@property (nonatomic,strong) NSManagedObject *managedObject;
-@property (nonatomic,strong) NSPersistentStoreCoordinator* persistentStoreCoordinator;
+@property (nonatomic,readwrite) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic,readwrite) NSPersistentStoreCoordinator* persistentStoreCoordinator;
+@property (nonatomic,strong) FoodInfo *managedObject;
 
 @end

@@ -59,7 +59,7 @@
 - (IBAction)save:(id)sender
 {
     CoreDataManager *dataManager = [CoreDataManager sharedInstance];
-    [dataManager createContextForEntity:@"Food"];
+    [dataManager createContextForEntity:@"FoodInfo"];
     NSString *foodName = self.nameField.text;
     [dataManager setValue:foodName forKey:@"name"];
     [dataManager getValue:foodName forKey:@"name"];

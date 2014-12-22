@@ -11,6 +11,7 @@
 		B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ABB1A44C72100F62DC2 /* MainViewController.m */; };
 		B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */; };
 		B54B8ACD1A48615B00F62DC2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */; };
+		B5D7B89B1A48938800DC4521 /* FoodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D7B89A1A48938800DC4521 /* FoodInfo.m */; };
 		B5E495B61A45D944005B50A7 /* AddFoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */; };
 		B5EF1F2E1A28329A00B3E379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F2D1A28329A00B3E379 /* main.m */; };
 		B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F301A28329A00B3E379 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodListTableViewController.m; path = controllers/FoodListTableViewController.m; sourceTree = "<group>"; };
 		B54B8ACB1A48615B00F62DC2 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = managers/CoreDataManager.h; sourceTree = "<group>"; };
 		B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = managers/CoreDataManager.m; sourceTree = "<group>"; };
+		B5D7B8991A48938800DC4521 /* FoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodInfo.h; path = "untitled folder/FoodInfo.h"; sourceTree = "<group>"; };
+		B5D7B89A1A48938800DC4521 /* FoodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodInfo.m; path = "untitled folder/FoodInfo.m"; sourceTree = "<group>"; };
 		B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodTableViewController.h; path = controllers/AddFoodTableViewController.h; sourceTree = "<group>"; };
 		B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodTableViewController.m; path = controllers/AddFoodTableViewController.m; sourceTree = "<group>"; };
 		B5EF1F281A28329A00B3E379 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,15 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		B5D7B89C1A48939300DC4521 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5D7B8991A48938800DC4521 /* FoodInfo.h */,
+				B5D7B89A1A48938800DC4521 /* FoodInfo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B5EF1F1F1A28329A00B3E379 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		B5EF1F2A1A28329A00B3E379 /* WhatToEat */ = {
 			isa = PBXGroup;
 			children = (
+				B5D7B89C1A48939300DC4521 /* Models */,
 				B54B8AC71A4860FD00F62DC2 /* Managers */,
 				B54A21381A44C5960071B570 /* Controllers */,
 				B5EF1F2F1A28329A00B3E379 /* AppDelegate.h */,
@@ -268,6 +281,7 @@
 				B5EF1F2E1A28329A00B3E379 /* main.m in Sources */,
 				B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */,
 				B5EF1F371A28329A00B3E379 /* ViewController.m in Sources */,
+				B5D7B89B1A48938800DC4521 /* FoodInfo.m in Sources */,
 				B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */,
 				B5EF1F341A28329A00B3E379 /* WhatToEat.xcdatamodeld in Sources */,
 				B54B8ACD1A48615B00F62DC2 /* CoreDataManager.m in Sources */,
