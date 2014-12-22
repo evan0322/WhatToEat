@@ -50,16 +50,12 @@
         self.nameField = (UITextField *) [cell.contentView viewWithTag:101];
         return cell;
     }
-    
-    // Configure the cell...
-    
     return nil;
 }
 
 - (IBAction)save:(id)sender
 {
     CoreDataManager *dataManager = [CoreDataManager sharedInstance];
-    [dataManager createContextForEntity:@"FoodInfo"];
     NSString *foodName = self.nameField.text;
     [dataManager setValue:foodName forEntity:@"FoodInfo" forKey:@"name"];
 }

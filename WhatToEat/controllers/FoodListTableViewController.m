@@ -24,7 +24,7 @@ NSArray* foodInfos;
     for (FoodInfo *foodInfo in foodInfos) {
         NSLog(@"list print %@",foodInfo.name);
     }
-    [self.tableView reloadData];
+    [self.tableView reloadData];    
 }
 
 - (void)viewWillAppear:(BOOL)animated
