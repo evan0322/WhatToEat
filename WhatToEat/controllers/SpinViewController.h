@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpinViewController : UIViewController
+@interface SpinViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
 
 @end

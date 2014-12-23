@@ -146,6 +146,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Spin out your food!" id="Wlj-47-cyF"/>
+                    <connections>
+                        <outlet property="foodPicker" destination="WMV-oh-I4A" id="wgj-gn-tbK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-wm-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
