@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
 
+- (IBAction)spinFoodPicker:(id)sender;
+
 @end

@@ -51,6 +51,24 @@ NSArray* foodInfos;
     FoodInfo *info = [foodInfos objectAtIndex:row];
     return info.name;
 }
+
+// Catpure the picker view selection
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    FoodInfo *info = [foodInfos objectAtIndex:row];
+    NSLog(@"%@ is chosen !", info.name);
+    // This method is triggered whenever the user makes a change to the picker selection.
+    // The parameter named row and component represents what was selected.
+}
+
+- (IBAction)spinFoodPicker:(id)sender
+{
+    NSLog(@"clicked");
+    NSUInteger number = arc4random_uniform(foodInfos.count);
+    [self.foodPicker selectRow:number inComponent:0 animated:YES];
+}
+
+
 /*
 #pragma mark - Navigation
 
