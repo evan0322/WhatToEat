@@ -57,7 +57,8 @@
 {
     CoreDataManager *dataManager = [CoreDataManager sharedInstance];
     NSString *foodName = self.nameField.text;
-    [dataManager setValue:foodName forEntity:@"FoodInfo" forKey:@"name"];
+    [dataManager setValue:foodName forKey:@"name"];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancel:(id)sender

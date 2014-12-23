@@ -46,7 +46,7 @@ FoodInfo *foodInfo;
 */
 
 
-- (void) setValue:(NSString *)value forEntity:(NSString *)entity forKey:(NSString *)key
+- (void) setValue:(NSString *)value forKey:(NSString *)key
 {
     foodInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FoodInfo" inManagedObjectContext:managedObjectContext];
     [foodInfo setValue:value forKey:key];
@@ -71,7 +71,7 @@ FoodInfo *foodInfo;
 
 
 
-- (NSArray *) getFoodInfosForEntity:(NSString *)entity
+- (NSArray *) getFoodInfos
 {
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -81,13 +81,13 @@ FoodInfo *foodInfo;
     return fetchedObjects;
 }
 
-- (void) clearDataForEntity:(NSString *)entity
+- (void) clearData
 {
     NSError *error;
     if (!managedObjectContext) {
         return;
     }
-    NSArray *deletingObjects = [self getFoodInfosForEntity:entity];
+    NSArray *deletingObjects = [self getFoodInfos];
     for (FoodInfo *deletingObject in deletingObjects){
         [managedObjectContext deleteObject:deletingObject];
     }

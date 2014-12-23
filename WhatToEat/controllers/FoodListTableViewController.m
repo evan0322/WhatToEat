@@ -20,7 +20,7 @@ NSArray* foodInfos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    foodInfos = [[CoreDataManager sharedInstance] getFoodInfosForEntity:@"FoodInfo"];
+    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
     for (FoodInfo *foodInfo in foodInfos) {
         NSLog(@"list print %@",foodInfo.name);
     }
@@ -61,7 +61,7 @@ NSArray* foodInfos;
 
 - (IBAction)clear:(id)sender
 {
-    [[CoreDataManager sharedInstance] clearDataForEntity:@"FoodInfo"];
+    [[CoreDataManager sharedInstance] clearData];
     [self.tableView reloadData];
 }
 /*
