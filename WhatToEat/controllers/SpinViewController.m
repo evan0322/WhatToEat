@@ -63,7 +63,7 @@ NSArray* foodInfos;
 
 - (IBAction)spinFoodPicker:(id)sender
 {
-   
+   //generate random number
     NSUInteger number = arc4random_uniform((uint32_t)foodInfos.count);
     [self.foodPicker selectRow:number inComponent:0 animated:YES];
 }
