@@ -20,17 +20,17 @@ NSArray* foodInfos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
     for (FoodInfo *foodInfo in foodInfos) {
         NSLog(@"list print %@",foodInfo.name);
     }
-    [self.tableView reloadData];    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{  
     [self.tableView reloadData];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,6 +64,7 @@ NSArray* foodInfos;
     [[CoreDataManager sharedInstance] clearData];
     [self.tableView reloadData];
 }
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

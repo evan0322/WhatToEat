@@ -59,6 +59,7 @@
     NSString *foodName = self.nameField.text;
     [dataManager setValue:foodName forKey:@"name"];
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"didSaveNewFood" object:nil];
 }
 
 - (IBAction)cancel:(id)sender
