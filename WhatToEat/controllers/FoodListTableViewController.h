@@ -11,5 +11,6 @@
 @interface FoodListTableViewController : UITableViewController
 
 - (IBAction)clear:(id)sender;
+- (IBAction)Edit:(id)sender;
 
 @end

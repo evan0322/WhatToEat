@@ -96,7 +96,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem systemItem="flexibleSpace" id="cJN-hX-SLL"/>
-                        <barButtonItem systemItem="edit" id="WzW-yW-S8z"/>
+                        <barButtonItem systemItem="edit" id="WzW-yW-S8z">
+                            <connections>
+                                <action selector="Edit:" destination="t2r-hl-0Fn" id="kQs-wu-Uga"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Food List" id="zON-oT-arJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0cK-Hn-3Sh">

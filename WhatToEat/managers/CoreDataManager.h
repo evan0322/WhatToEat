@@ -19,6 +19,7 @@
 - (void)setValue:(id)value forKey:(NSString *)key;
 - (NSArray *)getFoodInfos;
 - (void)clearData;
+- (void)deleteDataAtIndex:(int)index;
 
 @property (nonatomic,readwrite) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic,readwrite) NSPersistentStoreCoordinator* persistentStoreCoordinator;

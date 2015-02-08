@@ -96,4 +96,18 @@ FoodInfo *foodInfo;
     }
 }
 
+- (void) deleteDataAtIndex: (int)index
+{
+    NSError *error;
+    if (!managedObjectContext) {
+        return;
+    }
+    NSArray *deletingObjects = [self getFoodInfos];
+    FoodInfo *deletingObject = [deletingObjects objectAtIndex:index];
+    [managedObjectContext deleteObject:deletingObject];
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't delete: %@", [error localizedDescription]);
+    }
+}
+
 @end

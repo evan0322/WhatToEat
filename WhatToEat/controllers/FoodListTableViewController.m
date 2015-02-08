@@ -44,6 +44,7 @@ NSArray* foodInfos;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
     // Return the number of rows in the section.
     return [foodInfos count];
 }
@@ -58,11 +59,30 @@ NSArray* foodInfos;
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+         [[CoreDataManager sharedInstance] deleteDataAtIndex:(int)indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+       
+    };
+}
+
 
 - (IBAction)clear:(id)sender
 {
     [[CoreDataManager sharedInstance] clearData];
     [self.tableView reloadData];
+}
+
+- (IBAction)Edit:(id)sender {
+    
+    [self.tableView setEditing:self.tableView.isEditing?NO:YES animated:YES];
+}
+
+- (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
 /*
