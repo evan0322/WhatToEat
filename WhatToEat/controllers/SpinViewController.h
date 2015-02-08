@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpinViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SpinViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *spinButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
 
 - (IBAction)spinFoodPicker:(id)sender;

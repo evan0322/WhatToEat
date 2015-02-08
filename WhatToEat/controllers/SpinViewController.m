@@ -20,9 +20,13 @@ NSArray* foodInfos;
 - (void)viewDidLoad {
     [super viewDidLoad];
     foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
-    for (FoodInfo *foodInfo in foodInfos) {
+    if ([foodInfos count]==0) {
+        self.spinButton.enabled = NO;
+    }
+    /*for (FoodInfo *foodInfo in foodInfos) {
         NSLog(@"list print %@",foodInfo.name);
     }
+     */
     self.foodPicker.dataSource = self;
     self.foodPicker.delegate = self;
     // Do any additional setup after loading the view.
@@ -58,34 +62,28 @@ NSArray* foodInfos;
     }
 }
 
-// Catpure the picker view selection
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    FoodInfo *info = [foodInfos objectAtIndex:row];
-    NSLog(@"%@ is chosen !", info.name);
-    [self showMessage:@"%@ is selected!"  withTitle:@"Enjoy"];
-    // This method is triggered whenever the user makes a change to the picker selection.
-    // The parameter named row and component represents what was selected.
-}
-
 - (IBAction)spinFoodPicker:(id)sender
 {
-   //generate random number except the instruction line
+    self.spinButton.enabled = NO;
+    //generate random number except the instruction line
     NSUInteger row = arc4random_uniform((uint32_t)foodInfos.count) + 1;
     [self.foodPicker selectRow:row inComponent:0 animated:YES];
     NSNumber *selectedRow = [NSNumber numberWithInteger:row];
+    //A hacky way to show alert after selection, apple may need to update picker to support completion block
     [self performSelector:@selector(didSelectRow:)
                withObject:selectedRow
                afterDelay:0.4];
-   //A hacky way to show alert after selection, apple may need to update picker to support completion block
+   
 
 }
 
 - (void) didSelectRow:(NSNumber *)index
 {
+    self.spinButton.enabled = YES;
     FoodInfo *info = [foodInfos objectAtIndex:index.intValue-1];
-    NSString *msg = [NSString stringWithFormat:@"%@ is selected!",info.name];
-    [self showMessage:msg  withTitle:@"Enjoy"];
+    NSString *msg = [NSString stringWithFormat:@"Enjoy your %@!",info.name];
+    [self showMessage:msg  withTitle:@"Yum"];
+    //[self.foodPicker selectRow:0 inComponent:0 animated:YES];
 
 }
 
@@ -93,11 +91,17 @@ NSArray* foodInfos;
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:msg
-                                                       delegate:nil
+                                                       delegate:self
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
 }
+
+- (void) alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self.foodPicker selectRow:0 inComponent:0 animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation

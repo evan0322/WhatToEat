@@ -130,8 +130,8 @@
                                     <constraint firstAttribute="height" priority="750" constant="170" id="fvW-b8-vI2"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8">
-                                <rect key="frame" x="277" y="363" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8">
+                                <rect key="frame" x="282.5" y="363" width="35" height="30"/>
                                 <state key="normal" title="Spin!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -151,6 +151,7 @@
                     <navigationItem key="navigationItem" title="Spin out your food!" id="Wlj-47-cyF"/>
                     <connections>
                         <outlet property="foodPicker" destination="WMV-oh-I4A" id="wgj-gn-tbK"/>
+                        <outlet property="spinButton" destination="7L9-ml-oX8" id="pdb-re-BZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtr-wm-XCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
