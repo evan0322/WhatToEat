@@ -63,7 +63,7 @@ NSArray* foodInfos;
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
          [[CoreDataManager sharedInstance] deleteDataAtIndex:(int)indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
        
     };
 }
@@ -75,9 +75,15 @@ NSArray* foodInfos;
     [self.tableView reloadData];
 }
 
-- (IBAction)Edit:(id)sender {
-    
-    [self.tableView setEditing:self.tableView.isEditing?NO:YES animated:YES];
+- (IBAction)Edit:(id)sender
+{
+    if (self.tableView.isEditing) {
+        [self.tableView setEditing:NO animated:YES];
+        self.AddButton.enabled = YES;
+    } else{
+        [self.tableView setEditing:YES animated:YES];
+        self.AddButton.enabled = NO;
+    }
 }
 
 - (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

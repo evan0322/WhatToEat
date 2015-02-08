@@ -12,5 +12,6 @@
 
 - (IBAction)clear:(id)sender;
 - (IBAction)Edit:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *AddButton;
 
 @end
