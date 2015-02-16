@@ -16,7 +16,7 @@
 
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 @end

@@ -23,6 +23,11 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textFieldDidChange:)
+                                                 name:UITextFieldTextDidChangeNotification
+                                               object:nameField];
+    self.saveButton.enabled = NO;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -57,10 +62,20 @@
     return nil;
 }
 
+- (void)textFieldDidChange:(NSNotification *)notification {
+    NSString *foodName = [self.nameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([foodName isEqualToString:@""]) {
+        self.saveButton.enabled = NO;
+    } else {
+        self.saveButton.enabled = YES;
+    }
+}
+
+
 - (IBAction)save:(id)sender
 {
     CoreDataManager *dataManager = [CoreDataManager sharedInstance];
-    NSString *foodName = self.nameField.text;
+    NSString *foodName = [self.nameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     [dataManager setValue:foodName forKey:@"name"];
     [self dismissViewControllerAnimated:YES completion:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"didSaveNewFood" object:nil];

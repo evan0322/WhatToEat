@@ -43,8 +43,10 @@
     self.chooseButton.enabled = NO;
     if ([foodInfos count]==0) {
         self.chooseButton.enabled = NO;
+        self.chooseButton.alpha = 0.5;
     } else {
         self.chooseButton.enabled = YES;
+        self.chooseButton.alpha = 1.0;
     }
 }
 /*
