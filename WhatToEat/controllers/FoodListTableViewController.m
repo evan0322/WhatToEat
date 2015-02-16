@@ -76,10 +76,8 @@ NSArray* foodInfos;
 {
     if (self.tableView.isEditing) {
         [self.tableView setEditing:NO animated:YES];
-        self.AddButton.enabled = YES;
     } else{
         [self.tableView setEditing:YES animated:YES];
-        self.AddButton.enabled = NO;
     }
 }
 
