@@ -28,6 +28,7 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkAndKnife.png" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
                                 <rect key="frame" x="180" y="66" width="240" height="240"/>
+                                <color key="tintColor" red="0.29019607843137257" green="0.57647058823529407" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="JaU-RY-DZa"/>
                                     <constraint firstAttribute="width" constant="240" id="Vy8-hs-wbI"/>
@@ -57,6 +58,7 @@
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
                     <connections>
                         <outlet property="chooseButton" destination="ruo-fl-cPC" id="vhu-Nz-QUH"/>
+                        <outlet property="titleImage" destination="39A-vb-Q79" id="lfZ-q3-fn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

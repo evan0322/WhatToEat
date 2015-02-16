@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "CoreDataManager.h"
+#import "UIConstants.h"
 
 
 @interface MainViewController ()
@@ -23,6 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleImage.image =[self.titleImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] ;
+    self.navigationController.navigationBar.barTintColor = lightBlue;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     // Do any additional setup after loading the view.
 }
 

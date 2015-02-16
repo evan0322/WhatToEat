@@ -13,6 +13,7 @@
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *chooseButton;
+@property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 
 
 @end

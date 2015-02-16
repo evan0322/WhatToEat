@@ -38,6 +38,7 @@
 		B50B22301A9286BC0014ED9D /* FoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodInfo.h; sourceTree = "<group>"; };
 		B50B22311A9286BC0014ED9D /* FoodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodInfo.m; sourceTree = "<group>"; };
 		B50B22341A928B1B0014ED9D /* forkAndKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkAndKnife.png; sourceTree = "<group>"; };
+		B50EE8621A929B2300502EF1 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		B54A213F1A44C6B60071B570 /* SpinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinViewController.h; path = controllers/SpinViewController.h; sourceTree = "<group>"; };
 		B54A21401A44C6B60071B570 /* SpinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinViewController.m; path = controllers/SpinViewController.m; sourceTree = "<group>"; };
 		B54B8ABA1A44C72100F62DC2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = controllers/MainViewController.h; sourceTree = "<group>"; };
@@ -91,12 +92,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B50B22331A928B1B0014ED9D /* images */ = {
+		B50B22331A928B1B0014ED9D /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				B50B22341A928B1B0014ED9D /* forkAndKnife.png */,
 			);
+			name = Images;
 			path = images;
+			sourceTree = "<group>";
+		};
+		B50EE8601A929A5B00502EF1 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B50EE8621A929B2300502EF1 /* UIConstants.h */,
+			);
+			name = utilities;
 			sourceTree = "<group>";
 		};
 		B54A21381A44C5960071B570 /* Controllers */ = {
@@ -144,7 +154,8 @@
 		B5EF1F2A1A28329A00B3E379 /* WhatToEat */ = {
 			isa = PBXGroup;
 			children = (
-				B50B22331A928B1B0014ED9D /* images */,
+				B50EE8601A929A5B00502EF1 /* utilities */,
+				B50B22331A928B1B0014ED9D /* Images */,
 				B50B222F1A9286BC0014ED9D /* Models */,
 				B54B8AC71A4860FD00F62DC2 /* Managers */,
 				B54A21381A44C5960071B570 /* Controllers */,
