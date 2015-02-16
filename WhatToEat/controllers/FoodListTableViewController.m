@@ -25,9 +25,6 @@ NSArray* foodInfos;
 - (void)viewWillAppear:(BOOL)animated
 {
     foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
-    for (FoodInfo *foodInfo in foodInfos) {
-        NSLog(@"list print %@",foodInfo.name);
-    }
     [self.tableView reloadData];
 }
 
