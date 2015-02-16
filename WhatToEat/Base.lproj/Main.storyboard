@@ -26,15 +26,15 @@
                                     <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
-                                <rect key="frame" x="180" y="138" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkAndKnife.png" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
+                                <rect key="frame" x="180" y="66" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="240" id="BlK-HY-xta"/>
-                                    <constraint firstAttribute="height" priority="750" constant="128" id="YW9-QR-ash"/>
+                                    <constraint firstAttribute="height" constant="240" id="JaU-RY-DZa"/>
+                                    <constraint firstAttribute="width" constant="240" id="Vy8-hs-wbI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC">
-                                <rect key="frame" x="274" y="366" width="53" height="30"/>
+                                <rect key="frame" x="274" y="376" width="53" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Choose">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,15 +46,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="100" id="AQH-Lb-PRs"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
-                            <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="Wcs-qt-rRL"/>
                             <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="Wnb-Ou-l34"/>
-                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="50" id="eBZ-TY-y70"/>
-                            <constraint firstAttribute="centerX" secondItem="39A-vb-Q79" secondAttribute="centerX" id="mkf-tW-xd8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="80" id="XQA-xp-RRR"/>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="Xb9-K4-cSr"/>
+                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="70" id="vc3-TT-6Jg"/>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="40" id="ym7-hH-dwJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
+                    <connections>
+                        <outlet property="chooseButton" destination="ruo-fl-cPC" id="vhu-Nz-QUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,4 +273,7 @@
             <point key="canvasLocation" x="1834" y="1056"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="forkAndKnife.png" width="512" height="512"/>
+    </resources>
 </document>

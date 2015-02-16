@@ -7,12 +7,13 @@
 //
 
 #import "MainViewController.h"
+#import "CoreDataManager.h"
 
 
 @interface MainViewController ()
-
-
-
+{
+    NSArray* foodInfos;
+}
 @end
 
 
@@ -30,6 +31,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
+    self.chooseButton.enabled = NO;
+    if ([foodInfos count]==0) {
+        self.chooseButton.enabled = NO;
+    } else {
+        self.chooseButton.enabled = YES;
+    }
+}
 /*
 #pragma mark - Navigation
 

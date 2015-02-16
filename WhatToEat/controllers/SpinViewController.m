@@ -10,11 +10,13 @@
 #import "CoreDataManager.h"
 
 @interface SpinViewController ()
-
+{
+    NSArray* foodInfos;
+}
 @end
 
 @implementation SpinViewController
-NSArray* foodInfos;
+
 
 
 - (void)viewDidLoad {
