@@ -20,6 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco">
                                 <rect key="frame" x="249" y="446" width="103" height="30"/>
                                 <state key="normal" title="Add New Food">
+                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -38,6 +39,7 @@
                                 <rect key="frame" x="274" y="376" width="53" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Choose">
+                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -137,6 +139,7 @@
                         <subviews>
                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-oh-I4A">
                                 <rect key="frame" x="0.0" y="97" width="600" height="162"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="600" id="NbD-ts-aXo"/>
                                     <constraint firstAttribute="height" priority="750" constant="170" id="fvW-b8-vI2"/>
@@ -145,6 +148,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8">
                                 <rect key="frame" x="282.5" y="363" width="35" height="30"/>
                                 <state key="normal" title="Spin!">
+                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -247,6 +251,7 @@
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iIC-Id-6Xr">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ite-Qz-caW"/>

@@ -8,6 +8,7 @@
 
 #import "SpinViewController.h"
 #import "CoreDataManager.h"
+#import "UIConstants.h"
 
 @interface SpinViewController ()
 {

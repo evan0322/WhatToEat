@@ -7,6 +7,7 @@
 //
 
 #import "AddFoodTableViewController.h"
+#import "UIConstants.h"
 
 @interface AddFoodTableViewController ()
 
@@ -18,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.barTintColor = lightBlue;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
