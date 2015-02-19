@@ -42,7 +42,7 @@ NSArray* foodInfos;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
-    // Return the number of rows in the section.
+    // Return the number of rows in the section .
     return [foodInfos count];
 }
 
