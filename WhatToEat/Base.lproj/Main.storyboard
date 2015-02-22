@@ -155,6 +155,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="AddButton" destination="0cK-Hn-3Sh" id="hzo-a6-XZY"/>
+                        <outlet property="clearBarButton" destination="JTr-dp-CKQ" id="llF-ID-uo9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP2-Wy-RE3" userLabel="First Responder" sceneMemberID="firstResponder"/>

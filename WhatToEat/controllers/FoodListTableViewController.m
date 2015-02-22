@@ -9,6 +9,10 @@
 #import "FoodListTableViewController.h"
 #import "CoreDataManager.h"
 #import "FoodInfo.h"
+#import <UIColor+FlatUI.h>
+#import <UIFont+FlatUI.h>
+#import <FlatUIKit/FUIButton.h>
+#import <FlatUIKit/FUIAlertView.h>
 
 @interface FoodListTableViewController ()
 
@@ -68,8 +72,23 @@ NSArray* foodInfos;
 
 - (IBAction)clear:(id)sender
 {
-    [[CoreDataManager sharedInstance] clearData];
-    [self.tableView reloadData];
+    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Clear"
+                                                          message:@"Are you sure you want to delete your list?"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Yes",nil];
+    alertView.titleLabel.textColor = [UIColor cloudsColor];
+    alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    alertView.messageLabel.textColor = [UIColor cloudsColor];
+    alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+    alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+    alertView.alertContainer.backgroundColor = [UIColor colorFromHexCode:@"4A939F"];
+    alertView.defaultButtonColor = [UIColor cloudsColor];
+    alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+    alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+    alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+    alertView.tag = 100;
+    [alertView show];
 }
 
 - (IBAction)Edit:(id)sender
@@ -86,6 +105,14 @@ NSArray* foodInfos;
     return YES;
 }
 
+
+-(void) alertView:(FUIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag==100 && buttonIndex == 1) {
+        [[CoreDataManager sharedInstance] clearData];
+        [self.tableView reloadData];
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

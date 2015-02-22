@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FlatUIKit/FUIAlertView.h>
 
-@interface FoodListTableViewController : UITableViewController
+@interface FoodListTableViewController : UITableViewController <FUIAlertViewDelegate>
 
 - (IBAction)clear:(id)sender;
 - (IBAction)Edit:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *AddButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clearBarButton;
 
 @end
