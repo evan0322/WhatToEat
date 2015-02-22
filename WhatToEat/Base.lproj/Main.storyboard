@@ -17,18 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco">
-                                <rect key="frame" x="249" y="446" width="103" height="30"/>
-                                <state key="normal" title="Add New Food">
-                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkAndKnife.png" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
-                                <rect key="frame" x="180" y="65" width="240" height="240"/>
+                                <rect key="frame" x="180" y="79" width="240" height="240"/>
                                 <color key="tintColor" red="0.29019607843137257" green="0.57647058823529407" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="JaU-RY-DZa"/>
@@ -36,11 +26,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC" customClass="FUIButton">
-                                <rect key="frame" x="240" y="366" width="120" height="50"/>
+                                <rect key="frame" x="225" y="351" width="150" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHT-gN-TEn"/>
-                                    <constraint firstAttribute="width" constant="120" id="Wgk-iF-sjt"/>
+                                    <constraint firstAttribute="width" constant="150" id="Wgk-iF-sjt"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -56,25 +46,54 @@
                                     <segue destination="ay9-Oa-9bI" kind="show" id="Szu-Qk-t3C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco" customClass="FUIButton">
+                                <rect key="frame" x="225" y="430" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LIG-Am-41H"/>
+                                    <constraint firstAttribute="height" constant="50" id="Uyb-sc-5Hc"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add New Food">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="4pS-in-38A"/>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" constant="-9" id="4pS-in-38A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="155" id="7Sv-PE-qQY"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="80" id="XQA-xp-RRR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="76" id="NLc-Xu-tRX"/>
+                            <constraint firstAttribute="centerX" secondItem="39A-vb-Q79" secondAttribute="centerX" id="QyD-wc-35g"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="60" id="XQA-xp-RRR"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="30" id="c1M-MS-ovU"/>
-                            <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="irR-an-IRi"/>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="irR-an-IRi"/>
                             <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="ryM-DS-oE5"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="11" id="tuC-B8-Ptd"/>
+                            <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="uEe-Al-I5X"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4pS-in-38A"/>
+                                <exclude reference="HKY-JG-NBN"/>
+                                <exclude reference="c1M-MS-ovU"/>
                                 <exclude reference="tuC-B8-Ptd"/>
+                                <exclude reference="XQA-xp-RRR"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
                     <connections>
+                        <outlet property="addButton" destination="R6i-6C-fco" id="C2l-S8-Vxi"/>
                         <outlet property="chooseButton" destination="ruo-fl-cPC" id="vhu-Nz-QUH"/>
                         <outlet property="titleImage" destination="39A-vb-Q79" id="lfZ-q3-fn1"/>
                     </connections>
@@ -161,11 +180,22 @@
                                     <constraint firstAttribute="height" priority="750" constant="170" id="fvW-b8-vI2"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8">
-                                <rect key="frame" x="282.5" y="363" width="35" height="30"/>
-                                <state key="normal" title="Spin!">
-                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7L9-ml-oX8" customClass="FUIButton">
+                                <rect key="frame" x="224.5" y="346" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qu5-xH-qPq"/>
+                                    <constraint firstAttribute="width" constant="150" id="nJE-gM-RZs"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Spin!">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="spinFoodPicker:" destination="ay9-Oa-9bI" eventType="touchUpInside" id="LhN-y6-unn"/>
@@ -176,7 +206,7 @@
                         <constraints>
                             <constraint firstItem="WMV-oh-I4A" firstAttribute="top" secondItem="2OD-xb-kJZ" secondAttribute="bottom" constant="29" id="OeS-HW-81i"/>
                             <constraint firstAttribute="centerX" secondItem="7L9-ml-oX8" secondAttribute="centerX" id="fln-9e-zOv"/>
-                            <constraint firstItem="7L9-ml-oX8" firstAttribute="top" secondItem="WMV-oh-I4A" secondAttribute="bottom" constant="100" id="zhv-9S-fzB"/>
+                            <constraint firstItem="l5u-ta-HOk" firstAttribute="top" secondItem="7L9-ml-oX8" secondAttribute="bottom" constant="160" id="vm0-l5-ljK"/>
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>

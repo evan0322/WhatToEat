@@ -39,6 +39,14 @@
     self.chooseButton.titleLabel.font = [UIFont boldFlatFontOfSize:9];
     [self.chooseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.chooseButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    self.addButton.buttonColor = [UIColor colorFromHexCode:@"4A939F"];
+    self.addButton.shadowColor = [UIColor grayColor];
+    self.addButton.shadowHeight = 3.0f;
+    self.addButton.cornerRadius = 6.0f;
+    self.addButton.titleLabel.font = [UIFont boldFlatFontOfSize:9];
+    [self.addButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.addButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     // Do any additional setup after loading the view.
 }
 

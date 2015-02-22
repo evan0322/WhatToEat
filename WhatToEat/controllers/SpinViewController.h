@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FlatUIKit/FUIButton.h>
 
 @interface SpinViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *spinButton;
+@property (weak, nonatomic) IBOutlet FUIButton *spinButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
 
 - (IBAction)spinFoodPicker:(id)sender;

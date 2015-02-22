@@ -15,6 +15,7 @@
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet FUIButton *chooseButton;
+@property (weak, nonatomic) IBOutlet FUIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 
 

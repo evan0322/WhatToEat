@@ -9,6 +9,9 @@
 #import "SpinViewController.h"
 #import "CoreDataManager.h"
 #import "UIConstants.h"
+#import <UIColor+FlatUI.h>
+#import <UIFont+FlatUI.h>
+#import <FlatUIKit/FUIButton.h>
 
 @interface SpinViewController ()
 {
@@ -32,6 +35,14 @@
      */
     self.foodPicker.dataSource = self;
     self.foodPicker.delegate = self;
+    
+    self.spinButton.buttonColor = [UIColor colorFromHexCode:@"4A939F"];
+    self.spinButton.shadowColor = [UIColor grayColor];
+    self.spinButton.shadowHeight = 3.0f;
+    self.spinButton.cornerRadius = 6.0f;
+    self.spinButton.titleLabel.font = [UIFont boldFlatFontOfSize:9];
+    [self.spinButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.spinButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     // Do any additional setup after loading the view.
 }
 
