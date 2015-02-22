@@ -58,7 +58,7 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (row == 0) {
-        return @"Choose Your Food ....";
+        return @"Let's Spin!";
     } else{
         FoodInfo *info = [foodInfos objectAtIndex:row-1];
         return info.name;
