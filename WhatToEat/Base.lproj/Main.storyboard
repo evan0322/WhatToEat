@@ -28,19 +28,29 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkAndKnife.png" translatesAutoresizingMaskIntoConstraints="NO" id="39A-vb-Q79">
-                                <rect key="frame" x="180" y="66" width="240" height="240"/>
+                                <rect key="frame" x="180" y="65" width="240" height="240"/>
                                 <color key="tintColor" red="0.29019607843137257" green="0.57647058823529407" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="JaU-RY-DZa"/>
                                     <constraint firstAttribute="width" constant="240" id="Vy8-hs-wbI"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC">
-                                <rect key="frame" x="274" y="376" width="53" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC" customClass="FUIButton">
+                                <rect key="frame" x="240" y="366" width="120" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Choose">
-                                    <color key="titleColor" red="0.2901960784" green="0.57647058819999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EHT-gN-TEn"/>
+                                    <constraint firstAttribute="width" constant="120" id="Wgk-iF-sjt"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Choose">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="ay9-Oa-9bI" kind="show" id="Szu-Qk-t3C"/>
@@ -49,13 +59,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="4pS-in-38A"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
-                            <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="Wnb-Ou-l34"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="80" id="XQA-xp-RRR"/>
-                            <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="Xb9-K4-cSr"/>
-                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="70" id="vc3-TT-6Jg"/>
-                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="40" id="ym7-hH-dwJ"/>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="30" id="c1M-MS-ovU"/>
+                            <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="irR-an-IRi"/>
+                            <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="ryM-DS-oE5"/>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="11" id="tuC-B8-Ptd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tuC-B8-Ptd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
                     <connections>
