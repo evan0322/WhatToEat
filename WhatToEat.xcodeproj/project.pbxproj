@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3D1128191482470730D33DDE /* libPods-WhatToEat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D619AC2BA27651D9B5952 /* libPods-WhatToEat.a */; };
 		B50B22321A9286BC0014ED9D /* FoodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B22311A9286BC0014ED9D /* FoodInfo.m */; };
-		B50B22351A928B1B0014ED9D /* forkAndKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B22341A928B1B0014ED9D /* forkAndKnife.png */; };
 		B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A21401A44C6B60071B570 /* SpinViewController.m */; };
 		B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ABB1A44C72100F62DC2 /* MainViewController.m */; };
 		B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */; };
 		B54B8ACD1A48615B00F62DC2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */; };
 		B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF18F1A9C352C00490AE1 /* lauchImage.png */; };
 		B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */; };
+		B5DCF19E1A9D685800490AE1 /* forkAndKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */; };
 		B5E495B61A45D944005B50A7 /* AddFoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */; };
 		B5EF1F2E1A28329A00B3E379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F2D1A28329A00B3E379 /* main.m */; };
 		B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F301A28329A00B3E379 /* AppDelegate.m */; };
@@ -41,7 +41,6 @@
 		84501BCDE4A1520AC7535208 /* Pods-WhatToEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToEat/Pods-WhatToEat.debug.xcconfig"; sourceTree = "<group>"; };
 		B50B22301A9286BC0014ED9D /* FoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodInfo.h; sourceTree = "<group>"; };
 		B50B22311A9286BC0014ED9D /* FoodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodInfo.m; sourceTree = "<group>"; };
-		B50B22341A928B1B0014ED9D /* forkAndKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkAndKnife.png; sourceTree = "<group>"; };
 		B50EE8621A929B2300502EF1 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		B54A213F1A44C6B60071B570 /* SpinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinViewController.h; path = controllers/SpinViewController.h; sourceTree = "<group>"; };
 		B54A21401A44C6B60071B570 /* SpinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinViewController.m; path = controllers/SpinViewController.m; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		B5DCF1961A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DCF1971A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DCF1981A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkAndKnife.png; sourceTree = "<group>"; };
 		B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodTableViewController.h; path = controllers/AddFoodTableViewController.h; sourceTree = "<group>"; };
 		B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodTableViewController.m; path = controllers/AddFoodTableViewController.m; sourceTree = "<group>"; };
 		B5EF1F281A28329A00B3E379 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B5DCF18F1A9C352C00490AE1 /* lauchImage.png */,
-				B50B22341A928B1B0014ED9D /* forkAndKnife.png */,
+				B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */,
 			);
 			name = Images;
 			path = images;
@@ -318,8 +318,8 @@
 				B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */,
 				B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */,
 				B5EF1F3A1A28329A00B3E379 /* Main.storyboard in Resources */,
+				B5DCF19E1A9D685800490AE1 /* forkAndKnife.png in Resources */,
 				B5EF1F3F1A28329A00B3E379 /* LaunchScreen.xib in Resources */,
-				B50B22351A928B1B0014ED9D /* forkAndKnife.png in Resources */,
 				B5EF1F3C1A28329A00B3E379 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,13 +9,13 @@
 //Buttons
 "KStringChooseButtonTitle" = "选择";
 "KStringAddButtonTitle" = "添加食物种类";
-"KStringSpinButtonTitle" = "转动！";
+"KStringSpinButtonTitle" = "转动!";
 
 //Alert Views
 "KStringChooseCompleteTitle" = "搞定";
-"KStringChooseCompleteMessage" = "这顿就吃%@啦！";
+"KStringChooseCompleteMessage" = "这顿就吃%@啦";
 "KStringConfirmDeleteTitle" = "清空";
-"KStringConfirmDeleteMessage" = "确定清除整个列表？";
+"KStringConfirmDeleteMessage" = "确定清除整个列表?";
 "KStringConfirm" = "确定";
 "KStringCancel" = "取消";
 
