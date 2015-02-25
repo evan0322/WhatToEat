@@ -28,6 +28,7 @@
                                                  name:UITextFieldTextDidChangeNotification
                                                object:nameField];
     self.saveButton.enabled = NO;
+    self.navigationItem.title = NSLocalizedString(@"KStringAddFoodTableViewTitle", nil);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

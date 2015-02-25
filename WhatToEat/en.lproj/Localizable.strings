@@ -6,5 +6,23 @@
   Copyright (c) 2015 WEI.XIE. All rights reserved.
 */
 
-"Choose" = "Choose";
-"addNewFood" = "Add New Food";
+//Buttons
+"KStringChooseButtonTitle" = "Choose";
+"KStringAddButtonTitle" = "Add New Food";
+"KStringSpinButtonTitle" = "Spin！";
+
+//Alert Views
+"KStringChooseCompleteTitle" = "Yum";
+"KStringChooseCompleteMessage" = "Enjoy your %@ !";
+"KStringConfirmDeleteTitle" = "Clear";
+"KStringConfirmDeleteMessage" = "Are you sure you want to delete your list?";
+"KStringConfirm" = "Yes";
+"KStringCancel" = "No";
+
+//Navi Bars
+"KStringSpinViewTitle" = "What To Eat?";
+"KStringFoodListTableViewTitle" = "Food List";
+"KStringAddFoodTableViewTitle" = "Add New Food";
+
+//Spin View
+"KStringSpinViewBeginSpin" = "Let's spin!";

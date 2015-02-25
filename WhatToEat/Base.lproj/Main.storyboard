@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="1070" y="1056"/>
         </scene>
-        <!--Spin out your food!-->
+        <!--_Spin out your food!-->
         <scene sceneID="GjA-g8-e7F">
             <objects>
                 <viewController id="ay9-Oa-9bI" customClass="SpinViewController" sceneMemberID="viewController">
@@ -175,15 +175,7 @@
                                     <constraint firstAttribute="width" constant="150" id="nJE-gM-RZs"/>
                                 </constraints>
                                 <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Spin!">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
                                     <action selector="spinFoodPicker:" destination="ay9-Oa-9bI" eventType="touchUpInside" id="LhN-y6-unn"/>
@@ -198,7 +190,7 @@
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Spin out your food!" id="Wlj-47-cyF"/>
+                    <navigationItem key="navigationItem" title="_Spin out your food!" id="Wlj-47-cyF"/>
                     <connections>
                         <outlet property="foodPicker" destination="WMV-oh-I4A" id="wgj-gn-tbK"/>
                         <outlet property="spinButton" destination="7L9-ml-oX8" id="pdb-re-BZm"/>
@@ -257,12 +249,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add New Food" id="3wy-YL-8cf">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="QgN-jX-B80">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QgN-jX-B80">
                             <connections>
                                 <action selector="cancel:" destination="6m6-ak-zrP" id="tor-v6-Erp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZTZ-6y-wUE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZTZ-6y-wUE">
                             <connections>
                                 <action selector="save:" destination="6m6-ak-zrP" id="NDE-mr-07Q"/>
                             </connections>

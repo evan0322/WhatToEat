@@ -24,6 +24,7 @@ NSArray* foodInfos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = NSLocalizedString(@"KStringFoodListTableViewTitle", nil);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -72,11 +73,11 @@ NSArray* foodInfos;
 
 - (IBAction)clear:(id)sender
 {
-    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Clear"
-                                                          message:@"Are you sure you want to delete your list?"
+    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:NSLocalizedString(@"KStringConfirmDeleteTitle", nil)
+                                                          message:NSLocalizedString(@"KStringConfirmDeleteMessage", nil)
                                                          delegate:self
-                                                cancelButtonTitle:@"Cancel"
-                                                otherButtonTitles:@"Yes",nil];
+                                                cancelButtonTitle:NSLocalizedString(@"KStringCancel", nil)
+                                                otherButtonTitles:NSLocalizedString(@"KStringConfirm", nil),nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     alertView.messageLabel.textColor = [UIColor cloudsColor];

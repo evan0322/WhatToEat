@@ -44,7 +44,10 @@
     self.spinButton.titleLabel.font = [UIFont boldFlatFontOfSize:9];
     [self.spinButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.spinButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    self.spinButton.titleLabel.font = [UIFont boldFlatFontOfSize:17];
+    [self.spinButton setTitle:NSLocalizedString(@"KStringSpinButtonTitle", nil) forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = NSLocalizedString(@"KStringSpinViewTitle", nil);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +73,7 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (row == 0) {
-        return @"Let's Spin!";
+        return NSLocalizedString(@"KStringSpinViewBeginSpin", nil);
     } else{
         FoodInfo *info = [foodInfos objectAtIndex:row-1];
         return info.name;
@@ -96,9 +99,8 @@
 {
     self.spinButton.enabled = YES;
     FoodInfo *info = [foodInfos objectAtIndex:index.intValue-1];
-    NSString *msg = [NSString stringWithFormat:@"Enjoy your %@!",info.name];
-    [self showMessage:msg  withTitle:@"Yum"];
-    //[self.foodPicker selectRow:0 inComponent:0 animated:YES];
+    NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringChooseCompleteMessage", nil) ,info.name];
+    [self showMessage:msg  withTitle:NSLocalizedString(@"KStringChooseCompleteTitle", nil) ];
 
 }
 
@@ -107,7 +109,7 @@
     FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:title
                                                         message:msg
                                                        delegate:self
-                                              cancelButtonTitle:@"Ok"
+                                              cancelButtonTitle:NSLocalizedString(@"KStringConfirm", nil)
                                               otherButtonTitles:nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
