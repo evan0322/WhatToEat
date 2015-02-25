@@ -1,0 +1,21 @@
+
+/* Class = "IBUINavigationItem"; title = "Add New Food"; ObjectID = "3wy-YL-8cf"; */
+"3wy-YL-8cf.title" = "Add New Food";
+
+/* Class = "IBUILabel"; text = "Name:"; ObjectID = "KEj-Oq-InU"; */
+"KEj-Oq-InU.text" = "Name:";
+
+/* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "QgN-jX-B80"; */
+"QgN-jX-B80.title" = "Cancel";
+
+/* Class = "IBUINavigationItem"; title = "Spin out your food!"; ObjectID = "Wlj-47-cyF"; */
+"Wlj-47-cyF.title" = "Spin out your food!";
+
+/* Class = "IBUIBarButtonItem"; title = "Save"; ObjectID = "ZTZ-6y-wUE"; */
+"ZTZ-6y-wUE.title" = "Save";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "plY-dc-0hM"; */
+"plY-dc-0hM.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "Food List"; ObjectID = "zON-oT-arJ"; */
+"zON-oT-arJ.title" = "Food List";

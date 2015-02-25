@@ -15,6 +15,7 @@
 		B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */; };
 		B54B8ACD1A48615B00F62DC2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */; };
 		B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF18F1A9C352C00490AE1 /* lauchImage.png */; };
+		B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */; };
 		B5E495B61A45D944005B50A7 /* AddFoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */; };
 		B5EF1F2E1A28329A00B3E379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F2D1A28329A00B3E379 /* main.m */; };
 		B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F301A28329A00B3E379 /* AppDelegate.m */; };
@@ -51,6 +52,10 @@
 		B54B8ACB1A48615B00F62DC2 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = managers/CoreDataManager.h; sourceTree = "<group>"; };
 		B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = managers/CoreDataManager.m; sourceTree = "<group>"; };
 		B5DCF18F1A9C352C00490AE1 /* lauchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lauchImage.png; sourceTree = "<group>"; };
+		B5DCF1941A9D4ACA00490AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5DCF1961A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B5DCF1971A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B5DCF1981A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodTableViewController.h; path = controllers/AddFoodTableViewController.h; sourceTree = "<group>"; };
 		B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodTableViewController.m; path = controllers/AddFoodTableViewController.m; sourceTree = "<group>"; };
 		B5EF1F281A28329A00B3E379 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +192,7 @@
 			children = (
 				B5EF1F2C1A28329A00B3E379 /* Info.plist */,
 				B5EF1F2D1A28329A00B3E379 /* main.m */,
+				B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B5EF1F1F1A28329A00B3E379;
 			productRefGroup = B5EF1F291A28329A00B3E379 /* Products */;
@@ -309,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */,
+				B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */,
 				B5EF1F3A1A28329A00B3E379 /* Main.storyboard in Resources */,
 				B5EF1F3F1A28329A00B3E379 /* LaunchScreen.xib in Resources */,
 				B50B22351A928B1B0014ED9D /* forkAndKnife.png in Resources */,
@@ -395,10 +403,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5DCF1941A9D4ACA00490AE1 /* en */,
+				B5DCF1981A9D4B1600490AE1 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B5EF1F381A28329A00B3E379 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B5EF1F391A28329A00B3E379 /* Base */,
+				B5DCF1961A9D4B1600490AE1 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -407,6 +425,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B5EF1F3E1A28329A00B3E379 /* Base */,
+				B5DCF1971A9D4B1600490AE1 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

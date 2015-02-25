@@ -34,15 +34,7 @@
                                     <constraint firstAttribute="width" constant="150" id="Wgk-iF-sjt"/>
                                 </constraints>
                                 <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Spin!">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
                                     <segue destination="ay9-Oa-9bI" kind="show" id="Szu-Qk-t3C"/>
@@ -55,14 +47,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Uyb-sc-5Hc"/>
                                 </constraints>
                                 <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Add New Food">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
                                     <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
