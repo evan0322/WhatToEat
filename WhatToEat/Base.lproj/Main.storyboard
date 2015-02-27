@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC" customClass="FUIButton">
-                                <rect key="frame" x="225" y="396" width="150" height="50"/>
+                                <rect key="frame" x="225" y="306" width="150" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHT-gN-TEn"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco" customClass="FUIButton">
-                                <rect key="frame" x="225" y="461" width="150" height="50"/>
+                                <rect key="frame" x="225" y="406" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="LIG-Am-41H"/>
                                     <constraint firstAttribute="height" constant="50" id="Uyb-sc-5Hc"/>
@@ -57,16 +57,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" constant="-9" id="4pS-in-38A"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="110" id="7Sv-PE-qQY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" priority="750" constant="200" id="7Sv-PE-qQY"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="45" id="NLc-Xu-tRX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" priority="750" constant="100" id="NLc-Xu-tRX"/>
                             <constraint firstAttribute="centerX" secondItem="39A-vb-Q79" secondAttribute="centerX" id="QyD-wc-35g"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="60" id="XQA-xp-RRR"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="30" id="c1M-MS-ovU"/>
                             <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="irR-an-IRi"/>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" relation="greaterThanOrEqual" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="60" id="oWh-ob-pEG"/>
                             <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="ryM-DS-oE5"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="11" id="tuC-B8-Ptd"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="uEe-Al-I5X"/>
+                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="39A-vb-Q79" secondAttribute="bottom" id="zbE-XG-PNH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -185,8 +187,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WMV-oh-I4A" firstAttribute="top" secondItem="2OD-xb-kJZ" secondAttribute="bottom" constant="29" id="OeS-HW-81i"/>
+                            <constraint firstItem="7L9-ml-oX8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WMV-oh-I4A" secondAttribute="bottom" constant="30" id="eu6-vP-Db4"/>
                             <constraint firstAttribute="centerX" secondItem="7L9-ml-oX8" secondAttribute="centerX" id="fln-9e-zOv"/>
-                            <constraint firstItem="l5u-ta-HOk" firstAttribute="top" secondItem="7L9-ml-oX8" secondAttribute="bottom" constant="160" id="vm0-l5-ljK"/>
+                            <constraint firstItem="l5u-ta-HOk" firstAttribute="top" secondItem="7L9-ml-oX8" secondAttribute="bottom" priority="750" constant="160" id="vm0-l5-ljK"/>
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>
