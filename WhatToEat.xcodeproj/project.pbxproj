@@ -58,7 +58,7 @@
 		B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkAndKnife.png; sourceTree = "<group>"; };
 		B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodTableViewController.h; path = controllers/AddFoodTableViewController.h; sourceTree = "<group>"; };
 		B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodTableViewController.m; path = controllers/AddFoodTableViewController.m; sourceTree = "<group>"; };
-		B5EF1F281A28329A00B3E379 /* WhatToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EF1F281A28329A00B3E379 /* whattoeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whattoeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EF1F2C1A28329A00B3E379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5EF1F2D1A28329A00B3E379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5EF1F2F1A28329A00B3E379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		B5EF1F291A28329A00B3E379 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5EF1F281A28329A00B3E379 /* WhatToEat.app */,
+				B5EF1F281A28329A00B3E379 /* whattoeat.app */,
 				B5EF1F441A28329A00B3E379 /* WhatToEatTests.xctest */,
 			);
 			name = Products;
@@ -250,7 +250,7 @@
 			);
 			name = WhatToEat;
 			productName = WhatToEat;
-			productReference = B5EF1F281A28329A00B3E379 /* WhatToEat.app */;
+			productReference = B5EF1F281A28329A00B3E379 /* whattoeat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B5EF1F431A28329A00B3E379 /* WhatToEatTests */ = {
@@ -522,8 +522,9 @@
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = whattoeat;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -538,8 +539,9 @@
 				INFOPLIST_FILE = WhatToEat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = whattoeat;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
