@@ -3,7 +3,8 @@
 
 target 'WhatToEat' do
 
-pod 'FlatUIKit'
+pod 'FlatUIKit', '~> 1.6.0'
+pod 'AFNetworking', '~> 2.5.0'
 
 end
 
