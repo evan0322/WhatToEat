@@ -12,8 +12,8 @@
 #import <UIColor+FlatUI.h>
 #import <UIFont+FlatUI.h>
 #import <FlatUIKit/FUIButton.h>
+#import "Utils.h"
 
-#define themeColorCode @"4A939F"
 
 
 @interface MainViewController ()
@@ -34,29 +34,17 @@
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
-    self.chooseFromLocalButton = [self customizeButton:self.chooseFromLocalButton];
+    self.chooseFromLocalButton = [[Utils sharedInstance] customizeButton:self.chooseFromLocalButton];
     [self.chooseFromLocalButton setTitle:NSLocalizedString(@"KStringChooseButtonTitle", nil) forState:UIControlStateNormal];
     
-    self.chooseFromRemoteButton = [self customizeButton:self.chooseFromRemoteButton];
+    self.chooseFromRemoteButton = [[Utils sharedInstance] customizeButton:self.chooseFromRemoteButton];
     [self.chooseFromRemoteButton setTitle:@"Choose from remote" forState:UIControlStateNormal];
     
-    self.addButton = [self customizeButton:self.addButton];
+    self.addButton = [[Utils sharedInstance] customizeButton:self.addButton];
     [self.addButton setTitle:NSLocalizedString(@"KStringAddButtonTitle", nil) forState:UIControlStateNormal];
     
     
     // Do any additional setup after loading the view.
-}
-
-- (FUIButton *)customizeButton:(FUIButton *)button
-{
-    button.buttonColor = [UIColor colorFromHexCode:themeColorCode];
-    button.shadowColor = [UIColor grayColor];
-    button.shadowHeight = 3.0f;
-    button.cornerRadius = 6.0f;
-    button.titleLabel.font = [UIFont boldFlatFontOfSize:17];
-    [button setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
-    return button;
 }
 
 - (void)didReceiveMemoryWarning {
