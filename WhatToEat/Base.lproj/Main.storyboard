@@ -27,8 +27,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruo-fl-cPC" customClass="FUIButton">
-                                <rect key="frame" x="225" y="306" width="150" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="225" y="366" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHT-gN-TEn"/>
                                     <constraint firstAttribute="width" constant="150" id="Wgk-iF-sjt"/>
@@ -41,7 +41,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-6C-fco" customClass="FUIButton">
-                                <rect key="frame" x="225" y="406" width="150" height="50"/>
+                                <rect key="frame" x="225" y="446" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="LIG-Am-41H"/>
                                     <constraint firstAttribute="height" constant="50" id="Uyb-sc-5Hc"/>
@@ -53,17 +54,33 @@
                                     <segue destination="t2r-hl-0Fn" kind="show" id="DxE-qd-svl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-sd-Cfu" customClass="FUIButton">
+                                <rect key="frame" x="225" y="286" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8M7-pJ-F5A"/>
+                                    <constraint firstAttribute="width" constant="150" id="Osg-2s-fL6"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4wS-RA-y1H" kind="show" id="d16-Tk-g1Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="30" id="1V7-da-ND9"/>
                             <constraint firstItem="39A-vb-Q79" firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" constant="-9" id="4pS-in-38A"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" priority="750" constant="200" id="7Sv-PE-qQY"/>
                             <constraint firstAttribute="centerX" secondItem="R6i-6C-fco" secondAttribute="centerX" id="HKY-JG-NBN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" priority="750" constant="100" id="NLc-Xu-tRX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" priority="750" constant="60" id="NLc-Xu-tRX"/>
                             <constraint firstAttribute="centerX" secondItem="39A-vb-Q79" secondAttribute="centerX" id="QyD-wc-35g"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6i-6C-fco" secondAttribute="bottom" constant="60" id="XQA-xp-RRR"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="30" id="c1M-MS-ovU"/>
+                            <constraint firstItem="ruo-fl-cPC" firstAttribute="top" secondItem="hRB-sd-Cfu" secondAttribute="bottom" constant="30" id="fn4-6K-R1M"/>
                             <constraint firstItem="39A-vb-Q79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="irR-an-IRi"/>
+                            <constraint firstAttribute="centerX" secondItem="hRB-sd-Cfu" secondAttribute="centerX" id="m8D-fM-dLF"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" relation="greaterThanOrEqual" secondItem="39A-vb-Q79" secondAttribute="bottom" constant="60" id="oWh-ob-pEG"/>
                             <constraint firstAttribute="centerX" secondItem="ruo-fl-cPC" secondAttribute="centerX" id="ryM-DS-oE5"/>
                             <constraint firstItem="R6i-6C-fco" firstAttribute="top" secondItem="ruo-fl-cPC" secondAttribute="bottom" constant="11" id="tuC-B8-Ptd"/>
@@ -83,7 +100,8 @@
                     <navigationItem key="navigationItem" id="ZI1-2I-yfN"/>
                     <connections>
                         <outlet property="addButton" destination="R6i-6C-fco" id="C2l-S8-Vxi"/>
-                        <outlet property="chooseButton" destination="ruo-fl-cPC" id="vhu-Nz-QUH"/>
+                        <outlet property="chooseFromLocalButton" destination="ruo-fl-cPC" id="8cA-v7-Pu0"/>
+                        <outlet property="chooseFromRemoteButton" destination="hRB-sd-Cfu" id="2as-7e-tAW"/>
                         <outlet property="titleImage" destination="39A-vb-Q79" id="lfZ-q3-fn1"/>
                     </connections>
                 </viewController>
@@ -150,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1070" y="1056"/>
         </scene>
-        <!--_Spin out your food!-->
+        <!--Choose From Your List!-->
         <scene sceneID="GjA-g8-e7F">
             <objects>
-                <viewController id="ay9-Oa-9bI" customClass="SpinViewController" sceneMemberID="viewController">
+                <viewController id="ay9-Oa-9bI" customClass="SpinFromLocalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2OD-xb-kJZ"/>
                         <viewControllerLayoutGuide type="bottom" id="l5u-ta-HOk"/>
@@ -193,7 +211,7 @@
                             <constraint firstAttribute="centerX" secondItem="WMV-oh-I4A" secondAttribute="centerX" id="zjr-at-lB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="_Spin out your food!" id="Wlj-47-cyF"/>
+                    <navigationItem key="navigationItem" title="Choose From Your List!" id="Wlj-47-cyF"/>
                     <connections>
                         <outlet property="foodPicker" destination="WMV-oh-I4A" id="wgj-gn-tbK"/>
                         <outlet property="spinButton" destination="7L9-ml-oX8" id="pdb-re-BZm"/>
@@ -310,6 +328,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWG-3G-JZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834" y="1056"/>
+        </scene>
+        <!--Choose From Nearby Restaurants!-->
+        <scene sceneID="pqP-qS-hEw">
+            <objects>
+                <viewController id="4wS-RA-y1H" customClass="SpinFromRemoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="62N-yB-v9o"/>
+                        <viewControllerLayoutGuide type="bottom" id="lMV-qi-FcY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hcd-c7-Pmk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgf-36-FRh">
+                                <rect key="frame" x="0.0" y="97" width="600" height="162"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="170" id="PWG-j2-VYA"/>
+                                    <constraint firstAttribute="width" priority="750" constant="600" id="UOB-BW-rVq"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-hn-ylv" customClass="FUIButton">
+                                <rect key="frame" x="224.5" y="346" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0Ph-Ap-s6L"/>
+                                    <constraint firstAttribute="height" constant="50" id="2mO-bc-kyb"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="spinFoodPicker:" destination="4wS-RA-y1H" eventType="touchUpInside" id="Xs0-Q0-ScZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mgf-36-FRh" firstAttribute="top" secondItem="62N-yB-v9o" secondAttribute="bottom" constant="29" id="3MU-iZ-uPH"/>
+                            <constraint firstItem="3JW-hn-ylv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mgf-36-FRh" secondAttribute="bottom" constant="30" id="Cfv-NE-TsK"/>
+                            <constraint firstAttribute="centerX" secondItem="3JW-hn-ylv" secondAttribute="centerX" id="hAD-Dj-0ak"/>
+                            <constraint firstAttribute="centerX" secondItem="Mgf-36-FRh" secondAttribute="centerX" id="oi4-bQ-y34"/>
+                            <constraint firstItem="lMV-qi-FcY" firstAttribute="top" secondItem="3JW-hn-ylv" secondAttribute="bottom" priority="750" constant="160" id="qvS-g6-1Oj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose From Nearby Restaurants!" id="2Jk-Uy-RmN"/>
+                    <connections>
+                        <outlet property="foodPicker" destination="Mgf-36-FRh" id="QM9-n1-pTs"/>
+                        <outlet property="spinButton" destination="3JW-hn-ylv" id="dIu-5B-Fz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fp9-Mg-oPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="-404"/>
         </scene>
     </scenes>
     <resources>

@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		3D1128191482470730D33DDE /* libPods-WhatToEat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D619AC2BA27651D9B5952 /* libPods-WhatToEat.a */; };
 		B50B22321A9286BC0014ED9D /* FoodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B22311A9286BC0014ED9D /* FoodInfo.m */; };
-		B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A21401A44C6B60071B570 /* SpinViewController.m */; };
+		B54A21411A44C6B60071B570 /* SpinFromLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A21401A44C6B60071B570 /* SpinFromLocalViewController.m */; };
 		B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ABB1A44C72100F62DC2 /* MainViewController.m */; };
 		B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */; };
 		B54B8ACD1A48615B00F62DC2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */; };
+		B54CC5E21AE0A2C50053F07F /* SpinFromRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54CC5E11AE0A2C50053F07F /* SpinFromRemoteViewController.m */; };
 		B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF18F1A9C352C00490AE1 /* lauchImage.png */; };
 		B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */; };
 		B5DCF19E1A9D685800490AE1 /* forkAndKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */; };
@@ -42,14 +43,16 @@
 		B50B22301A9286BC0014ED9D /* FoodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodInfo.h; sourceTree = "<group>"; };
 		B50B22311A9286BC0014ED9D /* FoodInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodInfo.m; sourceTree = "<group>"; };
 		B50EE8621A929B2300502EF1 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
-		B54A213F1A44C6B60071B570 /* SpinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinViewController.h; path = controllers/SpinViewController.h; sourceTree = "<group>"; };
-		B54A21401A44C6B60071B570 /* SpinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinViewController.m; path = controllers/SpinViewController.m; sourceTree = "<group>"; };
+		B54A213F1A44C6B60071B570 /* SpinFromLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinFromLocalViewController.h; path = controllers/SpinFromLocalViewController.h; sourceTree = "<group>"; };
+		B54A21401A44C6B60071B570 /* SpinFromLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinFromLocalViewController.m; path = controllers/SpinFromLocalViewController.m; sourceTree = "<group>"; };
 		B54B8ABA1A44C72100F62DC2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = controllers/MainViewController.h; sourceTree = "<group>"; };
 		B54B8ABB1A44C72100F62DC2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = controllers/MainViewController.m; sourceTree = "<group>"; };
 		B54B8AC01A44C8B700F62DC2 /* FoodListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodListTableViewController.h; path = controllers/FoodListTableViewController.h; sourceTree = "<group>"; };
 		B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodListTableViewController.m; path = controllers/FoodListTableViewController.m; sourceTree = "<group>"; };
 		B54B8ACB1A48615B00F62DC2 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = managers/CoreDataManager.h; sourceTree = "<group>"; };
 		B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = managers/CoreDataManager.m; sourceTree = "<group>"; };
+		B54CC5E01AE0A2C50053F07F /* SpinFromRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinFromRemoteViewController.h; path = controllers/SpinFromRemoteViewController.h; sourceTree = "<group>"; };
+		B54CC5E11AE0A2C50053F07F /* SpinFromRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinFromRemoteViewController.m; path = controllers/SpinFromRemoteViewController.m; sourceTree = "<group>"; };
 		B5DCF18F1A9C352C00490AE1 /* lauchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lauchImage.png; sourceTree = "<group>"; };
 		B5DCF1941A9D4ACA00490AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5DCF1961A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -127,12 +130,14 @@
 			children = (
 				B54B8ABA1A44C72100F62DC2 /* MainViewController.h */,
 				B54B8ABB1A44C72100F62DC2 /* MainViewController.m */,
-				B54A213F1A44C6B60071B570 /* SpinViewController.h */,
-				B54A21401A44C6B60071B570 /* SpinViewController.m */,
+				B54A213F1A44C6B60071B570 /* SpinFromLocalViewController.h */,
+				B54A21401A44C6B60071B570 /* SpinFromLocalViewController.m */,
 				B54B8AC01A44C8B700F62DC2 /* FoodListTableViewController.h */,
 				B54B8AC11A44C8B700F62DC2 /* FoodListTableViewController.m */,
 				B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */,
 				B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */,
+				B54CC5E01AE0A2C50053F07F /* SpinFromRemoteViewController.h */,
+				B54CC5E11AE0A2C50053F07F /* SpinFromRemoteViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -374,7 +379,8 @@
 				B5EF1F311A28329A00B3E379 /* AppDelegate.m in Sources */,
 				B54B8ABC1A44C72100F62DC2 /* MainViewController.m in Sources */,
 				B5EF1F2E1A28329A00B3E379 /* main.m in Sources */,
-				B54A21411A44C6B60071B570 /* SpinViewController.m in Sources */,
+				B54CC5E21AE0A2C50053F07F /* SpinFromRemoteViewController.m in Sources */,
+				B54A21411A44C6B60071B570 /* SpinFromLocalViewController.m in Sources */,
 				B5EF1F371A28329A00B3E379 /* ViewController.m in Sources */,
 				B54B8AC21A44C8B700F62DC2 /* FoodListTableViewController.m in Sources */,
 				B5EF1F341A28329A00B3E379 /* WhatToEat.xcdatamodeld in Sources */,

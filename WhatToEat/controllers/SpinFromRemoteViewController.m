@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 WEI.XIE. All rights reserved.
 //
 
-#import "SpinViewController.h"
+#import "SpinFromRemoteViewController.h"
 #import "CoreDataManager.h"
 #import "UIConstants.h"
 #import <UIColor+FlatUI.h>
@@ -14,13 +14,13 @@
 #import <FlatUIKit/FUIButton.h>
 #import <FlatUIKit/FUIAlertView.h>
 
-@interface SpinViewController ()
+@interface SpinFromRemoteViewController ()
 {
     NSArray* foodInfos;
 }
 @end
 
-@implementation SpinViewController
+@implementation SpinFromRemoteViewController
 
 
 
@@ -31,8 +31,8 @@
         self.spinButton.enabled = NO;
     }
     /*for (FoodInfo *foodInfo in foodInfos) {
-        NSLog(@"list print %@",foodInfo.name);
-    }
+     NSLog(@"list print %@",foodInfo.name);
+     }
      */
     self.foodPicker.dataSource = self;
     self.foodPicker.delegate = self;
@@ -91,8 +91,8 @@
     [self performSelector:@selector(didSelectRow:)
                withObject:selectedRow
                afterDelay:0.4];
-   
-
+    
+    
 }
 
 - (void) didSelectRow:(NSNumber *)index
@@ -101,16 +101,16 @@
     FoodInfo *info = [foodInfos objectAtIndex:index.intValue-1];
     NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringChooseCompleteMessage", nil) ,info.name];
     [self showMessage:msg  withTitle:NSLocalizedString(@"KStringChooseCompleteTitle", nil) ];
-
+    
 }
 
 - (void) showMessage:(NSString *)msg withTitle: (NSString *)title
 {
     FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:title
-                                                        message:msg
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"KStringConfirm", nil)
-                                              otherButtonTitles:nil];
+                                                          message:msg
+                                                         delegate:self
+                                                cancelButtonTitle:NSLocalizedString(@"KStringConfirm", nil)
+                                                otherButtonTitles:nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     alertView.messageLabel.textColor = [UIColor cloudsColor];
@@ -131,13 +131,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
