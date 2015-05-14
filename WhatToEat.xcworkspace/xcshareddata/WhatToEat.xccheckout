@@ -12,6 +12,8 @@
 	<dict>
 		<key>11F9203F6B6DA0010CE9C21EC672CC0DA828C702</key>
 		<string>https://github.com/evan0322/WhatToEat.git</string>
+		<key>B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F</key>
+		<string>https://github.com/Yelp/yelp-api.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WhatToEat.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>11F9203F6B6DA0010CE9C21EC672CC0DA828C702</key>
 		<string>..</string>
+		<key>B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F</key>
+		<string>../../yelp-api</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/evan0322/WhatToEat.git</string>
@@ -35,6 +39,14 @@
 			<string>11F9203F6B6DA0010CE9C21EC672CC0DA828C702</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WhatToEat</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yelp-api</string>
 		</dict>
 	</array>
 </dict>
