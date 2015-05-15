@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0473AE1DABA0ABC5E93D161F"
+               BlueprintIdentifier = "F4F878C4DD304DFF9ACE8A31"
                BuildableName = "libPods-WhatToEat.a"
                BlueprintName = "Pods-WhatToEat"
                ReferencedContainer = "container:Pods.xcodeproj">
