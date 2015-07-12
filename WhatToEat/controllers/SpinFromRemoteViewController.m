@@ -14,6 +14,8 @@
 #import <FlatUIKit/FUIButton.h>
 #import <FlatUIKit/FUIAlertView.h>
 #import "Utils.h"
+#import "NSURLRequest+OAuth.h"
+#import "yepApiManager.h"
 
 @interface SpinFromRemoteViewController ()
 {
@@ -22,8 +24,6 @@
 @end
 
 @implementation SpinFromRemoteViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,12 +42,9 @@
     [self.spinButton setTitle:NSLocalizedString(@"KStringSpinButtonTitle", nil) forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"KStringSpinViewTitle", nil);
+    [self fetchBusinessInfo];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -133,5 +130,33 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+- (void) fetchBusinessInfo
+{
+    NSString *defaultTerm = @"dinner";
+    NSString *defaultLocation = @"San Francisco, CA";
+    
+    //Get the term and location from the command line if there were any, otherwise assign default values.
+    NSString *term = [[NSUserDefaults standardUserDefaults] valueForKey:@"term"] ?: defaultTerm;
+    NSString *location = [[NSUserDefaults standardUserDefaults] valueForKey:@"location"] ?: defaultLocation;
+    
+    yepApiManager *apiManager = [[yepApiManager alloc] init];
+    [apiManager queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSDictionary *topBusinessJSON, NSError *error) {
+        if (topBusinessJSON) {
+            if (error) {
+                NSLog(@"An error happened during the request: %@", error);
+            } else if (topBusinessJSON) {
+                NSLog(@"Top business info: \n %@", topBusinessJSON);
+            } else {
+                NSLog(@"No business was found");
+            }
+        };
+        
+    }];
+}
+
+
+
+
 
 @end

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-WhatToEat-AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-WhatToEat-FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F690AA2B71AFC21574384A8</key>
+		<key>E528A613AE436FF645CAD5C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A60D17E8F3C5F482E8E4CE4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4F878C4DD304DFF9ACE8A31</key>
+		<key>F811EF41F2B3775CD7A23E67</key>
 		<dict>
 			<key>primary</key>
 			<true/>

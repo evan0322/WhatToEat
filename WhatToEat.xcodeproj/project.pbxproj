@@ -32,6 +32,7 @@
 		B5BE356F1B06420E00032E60 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE355A1B06420E00032E60 /* OAServiceTicket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5BE35701B06420E00032E60 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE355D1B06420E00032E60 /* OAToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5BE35711B06420E00032E60 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE355F1B06420E00032E60 /* OATokenManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5D507911B53041D004F846B /* yepApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D507901B53041D004F846B /* yepApiManager.m */; };
 		B5DCF1901A9C352C00490AE1 /* lauchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF18F1A9C352C00490AE1 /* lauchImage.png */; };
 		B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */; };
 		B5DCF19E1A9D685800490AE1 /* forkAndKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */; };
@@ -111,6 +112,8 @@
 		B5BE355E1B06420E00032E60 /* OATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATokenManager.h; sourceTree = "<group>"; };
 		B5BE355F1B06420E00032E60 /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
 		B5BE35601B06420E00032E60 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		B5D5078F1B53041D004F846B /* yepApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yepApiManager.h; path = managers/yepApiManager.h; sourceTree = "<group>"; };
+		B5D507901B53041D004F846B /* yepApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = yepApiManager.m; path = managers/yepApiManager.m; sourceTree = "<group>"; };
 		B5DCF18F1A9C352C00490AE1 /* lauchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lauchImage.png; sourceTree = "<group>"; };
 		B5DCF1941A9D4ACA00490AE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5DCF1961A9D4B1600490AE1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 			children = (
 				B54B8ACB1A48615B00F62DC2 /* CoreDataManager.h */,
 				B54B8ACC1A48615B00F62DC2 /* CoreDataManager.m */,
+				B5D5078F1B53041D004F846B /* yepApiManager.h */,
+				B5D507901B53041D004F846B /* yepApiManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				B5BE35641B06420E00032E60 /* Base64Transcoder.c in Sources */,
 				B56B58181B053B65001CD9CF /* NSURLRequest+OAuth.m in Sources */,
 				B5BE356A1B06420E00032E60 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				B5D507911B53041D004F846B /* yepApiManager.m in Sources */,
 				B54A21411A44C6B60071B570 /* SpinFromLocalViewController.m in Sources */,
 				B5EF1F371A28329A00B3E379 /* ViewController.m in Sources */,
 				B5BE356D1B06420E00032E60 /* OAProblem.m in Sources */,
