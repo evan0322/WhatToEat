@@ -134,24 +134,25 @@
 - (void) fetchBusinessInfo
 {
     NSString *defaultTerm = @"dinner";
-    NSString *defaultLocation = @"San Francisco, CA";
+    NSString *defaultLocation = @"Ottawa, ON";
     
     //Get the term and location from the command line if there were any, otherwise assign default values.
     NSString *term = [[NSUserDefaults standardUserDefaults] valueForKey:@"term"] ?: defaultTerm;
     NSString *location = [[NSUserDefaults standardUserDefaults] valueForKey:@"location"] ?: defaultLocation;
     
     yepApiManager *apiManager = [[yepApiManager alloc] init];
-    [apiManager queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSDictionary *topBusinessJSON, NSError *error) {
-        if (topBusinessJSON) {
-            if (error) {
-                NSLog(@"An error happened during the request: %@", error);
-            } else if (topBusinessJSON) {
-                NSLog(@"Top business info: \n %@", topBusinessJSON);
-            } else {
-                NSLog(@"No business was found");
-            }
-        };
-        
+    [apiManager queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSArray *businessInfos, NSError *error) {
+        for (NSDictionary *businessJSON in businessInfos) {
+            if (businessJSON) {
+                if (error) {
+                    NSLog(@"An error happened during the request: %@", error);
+                } else if (businessJSON) {
+                    NSLog(@"Top business info: \n %@", businessJSON);
+                } else {
+                    NSLog(@"No business was found");
+                }
+            };
+        }
     }];
 }
 
