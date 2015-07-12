@@ -26,3 +26,5 @@
 
 //Spin View
 "KStringSpinViewBeginSpin" = "Let's spin!";
+"KStringSpinViewLoading" = "Loading..";
+"KStringSpinViewLoadingError" = "Unabled to get the infomation for your location";

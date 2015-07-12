@@ -13,7 +13,7 @@
 @interface SpinFromRemoteViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate, FUIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet FUIButton *spinButton;
-@property (weak, nonatomic) IBOutlet UIPickerView *foodPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *foodPicker;
 
 - (IBAction)spinFoodPicker:(id)sender;
 

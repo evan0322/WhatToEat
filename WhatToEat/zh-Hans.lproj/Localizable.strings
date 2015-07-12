@@ -26,3 +26,5 @@
 
 //Spin View
 "KStringSpinViewBeginSpin" = "开始选择!";
+"KStringSpinViewLoading" = "正在读取..";
+"KStringSpinViewLoadingError" = "无法读取您所在城市数据";

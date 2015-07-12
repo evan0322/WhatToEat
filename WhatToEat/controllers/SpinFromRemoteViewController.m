@@ -19,7 +19,7 @@
 
 @interface SpinFromRemoteViewController ()
 {
-    NSArray* foodInfos;
+    NSMutableArray* foodInfos;
 }
 @end
 
@@ -27,10 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    foodInfos = [[CoreDataManager sharedInstance] getFoodInfos];
-    if ([foodInfos count]==0) {
-        self.spinButton.enabled = NO;
-    }
+    foodInfos = [[NSMutableArray alloc] init];
     /*for (FoodInfo *foodInfo in foodInfos) {
      NSLog(@"list print %@",foodInfo.name);
      }
@@ -42,7 +39,13 @@
     [self.spinButton setTitle:NSLocalizedString(@"KStringSpinButtonTitle", nil) forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"KStringSpinViewTitle", nil);
-    [self fetchBusinessInfo];
+    [self fetchBusinessInfo:^(BOOL success) {
+        if (success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.foodPicker reloadAllComponents];
+            });
+        }
+    }];
 }
 
 
@@ -56,18 +59,21 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     //extra line for instruction
-    int count = (int)[foodInfos count];
-    return count+1;
+    if ((int)[foodInfos count]==0) {
+        return 1;
+    }
+    else return (int)[foodInfos count];
 }
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if (row == 0) {
-        return NSLocalizedString(@"KStringSpinViewBeginSpin", nil);
+    if ([foodInfos count]==0) {
+        return NSLocalizedString(@"KStringSpinViewLoading", nil);
     } else{
-        FoodInfo *info = [foodInfos objectAtIndex:row-1];
-        return info.name;
+        NSDictionary *foodInfo = [foodInfos objectAtIndex:row];
+        NSString *name = foodInfo[@"name"];
+        return name;
     }
 }
 
@@ -75,7 +81,7 @@
 {
     self.spinButton.enabled = NO;
     //generate random number except the instruction line
-    NSUInteger row = arc4random_uniform((uint32_t)foodInfos.count) + 1;
+    NSUInteger row = arc4random_uniform((uint32_t)foodInfos.count);
     [self.foodPicker selectRow:row inComponent:0 animated:YES];
     NSNumber *selectedRow = [NSNumber numberWithInteger:row];
     //A hacky way to show alert after selection, apple may need to update picker to support completion block
@@ -89,8 +95,9 @@
 - (void) didSelectRow:(NSNumber *)index
 {
     self.spinButton.enabled = YES;
-    FoodInfo *info = [foodInfos objectAtIndex:index.intValue-1];
-    NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringChooseCompleteMessage", nil) ,info.name];
+    NSDictionary *foodInfo = [foodInfos objectAtIndex:index.intValue];
+    NSString *name = foodInfo[@"name"];
+    NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringChooseCompleteMessage", nil) ,name];
     [self showMessage:msg  withTitle:NSLocalizedString(@"KStringChooseCompleteTitle", nil) ];
     
 }
@@ -131,7 +138,7 @@
  }
  */
 
-- (void) fetchBusinessInfo
+- (void) fetchBusinessInfo:(void (^)(BOOL success))completionHandler
 {
     NSString *defaultTerm = @"dinner";
     NSString *defaultLocation = @"Ottawa, ON";
@@ -142,17 +149,24 @@
     
     yepApiManager *apiManager = [[yepApiManager alloc] init];
     [apiManager queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSArray *businessInfos, NSError *error) {
-        for (NSDictionary *businessJSON in businessInfos) {
-            if (businessJSON) {
-                if (error) {
-                    NSLog(@"An error happened during the request: %@", error);
-                } else if (businessJSON) {
-                    NSLog(@"Top business info: \n %@", businessJSON);
-                } else {
-                    NSLog(@"No business was found");
+        if (error) {
+            completionHandler(NO);
+        } else {
+            for (NSDictionary *businessJSON in businessInfos) {
+                if (businessJSON) {
+                    if (error) {
+                        NSLog(@"An error happened during the request: %@", error);
+                    } else if (businessJSON) {
+                        NSString *mobileURL = businessJSON[@"mobile_url"];
+                        //NSLog(@"the mobile url for %@ is %@",name,mobileURL);
+                        [foodInfos addObject:businessJSON];
+                    } else {
+                        NSLog(@"No business was found");
+                    }
                 }
-            };
+            }
         }
+        completionHandler(YES);
     }];
 }
 

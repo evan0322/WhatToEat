@@ -32,9 +32,6 @@ static NSString * const kSearchLimit       = @"5";
             NSArray *businessArray = searchResponseJSON[@"businesses"];
             
             if ([businessArray count] > 0) {
-//                NSDictionary *firstBusiness = [businessArray firstObject];
-//                NSString *firstBusinessID = firstBusiness[@"id"];
-//                NSLog(@"%lu businesses found, querying business info for the top result: %@", (unsigned long)[businessArray count], firstBusinessID);
                 for (NSDictionary *businesses in businessArray) {
                     NSString *businessID = businesses[@"id"];
                     [self queryBusinessInfoForBusinessId:businessID completionHandler:^(NSDictionary *businessJSON, NSError *error) {
@@ -43,13 +40,12 @@ static NSString * const kSearchLimit       = @"5";
                             completionHandler(nil,error);
                         } else {
                             [bussinessInfos addObject:businessJSON];
-                            if ([bussinessInfos count]!=[businessArray count]) {
+                            if ([bussinessInfos count]==[businessArray count]) {
                                 completionHandler(bussinessInfos,nil);
                             }
                         }
                     }];
                 }
-                completionHandler(bussinessInfos,nil);
             } else {
                 completionHandler(nil, error); // No business was found
             }
