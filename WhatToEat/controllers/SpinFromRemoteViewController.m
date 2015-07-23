@@ -20,6 +20,8 @@
 @interface SpinFromRemoteViewController ()
 {
     NSMutableArray* foodInfos;
+    BOOL fetchingFailed;
+    CLLocationManager *locationManager;
 }
 @end
 
@@ -28,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     foodInfos = [[NSMutableArray alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
     /*for (FoodInfo *foodInfo in foodInfos) {
      NSLog(@"list print %@",foodInfo.name);
      }
@@ -39,13 +42,7 @@
     [self.spinButton setTitle:NSLocalizedString(@"KStringSpinButtonTitle", nil) forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"KStringSpinViewTitle", nil);
-    [self fetchBusinessInfo:^(BOOL success) {
-        if (success) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.foodPicker reloadAllComponents];
-            });
-        }
-    }];
+    [self getCurrentLocation];
 }
 
 
@@ -69,6 +66,9 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if ([foodInfos count]==0) {
+        if (fetchingFailed) {
+            return NSLocalizedString(@"KStringSpinViewLoadingError", nil);
+        }
         return NSLocalizedString(@"KStringSpinViewLoading", nil);
     } else{
         NSDictionary *foodInfo = [foodInfos objectAtIndex:row];
@@ -138,14 +138,13 @@
  }
  */
 
-- (void) fetchBusinessInfo:(void (^)(BOOL success))completionHandler
+- (void) fetchBusinessInfoForLocation:(NSString *)currentLocation andCompletion:(void (^)(BOOL success))completionHandler
 {
     NSString *defaultTerm = @"dinner";
-    NSString *defaultLocation = @"Ottawa, ON";
     
     //Get the term and location from the command line if there were any, otherwise assign default values.
     NSString *term = [[NSUserDefaults standardUserDefaults] valueForKey:@"term"] ?: defaultTerm;
-    NSString *location = [[NSUserDefaults standardUserDefaults] valueForKey:@"location"] ?: defaultLocation;
+    NSString *location = [[NSUserDefaults standardUserDefaults] valueForKey:@"location"] ?: currentLocation;
     
     yepApiManager *apiManager = [[yepApiManager alloc] init];
     [apiManager queryTopBusinessInfoForTerm:term location:location completionHandler:^(NSArray *businessInfos, NSError *error) {
@@ -170,7 +169,60 @@
     }];
 }
 
+#pragma mark - Get current location
 
+- (void)getCurrentLocation
+{
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [locationManager requestWhenInUseAuthorization];
+    }
+    [locationManager startUpdatingLocation];
+}
+
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [locationManager stopUpdatingLocation];
+    __block NSString *currentLocation;
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:newLocation
+                   completionHandler:^(NSArray *placemarks, NSError *error) {
+                       NSString *cityName = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
+                       NSString *state = placemarks.count ? [placemarks.firstObject administrativeArea] : @"Not Found";
+                       currentLocation = [NSString stringWithFormat:@"%@, %@",cityName,state];
+                       [self fetchBusinessInfoForLocation:currentLocation andCompletion:^(BOOL success) {
+                           if (success) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   [self.foodPicker reloadAllComponents];
+                               });
+                           } else{
+                               fetchingFailed = YES;
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   [self.foodPicker reloadAllComponents];
+                               });
+                           }
+                       }];
+                   }];
+//    NSLog(@"didUpdateToLocation: %@", newLocation);
+//    CLLocation *currentLocation = newLocation;
+//    
+//    if (currentLocation != nil) {
+//        NSString *longtitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+//        NSString *latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+//    }
+//    [locationManager stopUpdatingLocation];
+}
 
 
 

@@ -37,6 +37,7 @@
 		B5DCF1931A9D4ACA00490AE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF1951A9D4ACA00490AE1 /* Localizable.strings */; };
 		B5DCF19E1A9D685800490AE1 /* forkAndKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */; };
 		B5E495B61A45D944005B50A7 /* AddFoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */; };
+		B5EDE5F41B60937A0045E4F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EDE5F31B60937A0045E4F2 /* CoreLocation.framework */; };
 		B5EE835F1AE0A83500EC8D35 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE835E1AE0A83500EC8D35 /* Utils.m */; };
 		B5EE83631AE0AAC300EC8D35 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE83621AE0AAC300EC8D35 /* NSURLRequest+OAuth.m */; };
 		B5EF1F2E1A28329A00B3E379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF1F2D1A28329A00B3E379 /* main.m */; };
@@ -122,6 +123,7 @@
 		B5DCF19D1A9D685800490AE1 /* forkAndKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forkAndKnife.png; sourceTree = "<group>"; };
 		B5E495B41A45D944005B50A7 /* AddFoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodTableViewController.h; path = controllers/AddFoodTableViewController.h; sourceTree = "<group>"; };
 		B5E495B51A45D944005B50A7 /* AddFoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodTableViewController.m; path = controllers/AddFoodTableViewController.m; sourceTree = "<group>"; };
+		B5EDE5F31B60937A0045E4F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B5EE835D1AE0A83500EC8D35 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = controllers/Utils.h; sourceTree = "<group>"; };
 		B5EE835E1AE0A83500EC8D35 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = controllers/Utils.m; sourceTree = "<group>"; };
 		B5EE83611AE0AAC300EC8D35 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EDE5F41B60937A0045E4F2 /* CoreLocation.framework in Frameworks */,
 				3D1128191482470730D33DDE /* libPods-WhatToEat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +383,7 @@
 		F4EA034911892166F181C135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5EDE5F31B60937A0045E4F2 /* CoreLocation.framework */,
 				F25D619AC2BA27651D9B5952 /* libPods-WhatToEat.a */,
 			);
 			name = Frameworks;

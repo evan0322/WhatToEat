@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <FlatUIKit/FUIButton.h>
 #import <FlatUIKit/FUIAlertView.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SpinFromRemoteViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate, FUIAlertViewDelegate>
+
+
+@interface SpinFromRemoteViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate, FUIAlertViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet FUIButton *spinButton;
 @property (strong, nonatomic) IBOutlet UIPickerView *foodPicker;
