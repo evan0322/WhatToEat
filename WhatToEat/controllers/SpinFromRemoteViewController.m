@@ -44,6 +44,7 @@
     [self.spinButton setTitle:NSLocalizedString(@"KStringSpinButtonTitle", nil) forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"KStringSpinViewTitle", nil);
+    self.spinButton.enabled = NO;
     [self getCurrentLocation];
 }
 
@@ -217,7 +218,9 @@
             hasFetchedFoodInfo = YES;
             [self fetchBusinessInfoForLocation:currentLocation andCompletion:^(BOOL success) {
                 if (success) {
+                    
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        self.spinButton.enabled = YES;
                         [self.foodPicker reloadAllComponents];
                     });
                 } else{
