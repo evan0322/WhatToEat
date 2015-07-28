@@ -38,7 +38,7 @@
     [self.chooseFromLocalButton setTitle:NSLocalizedString(@"KStringChooseButtonTitle", nil) forState:UIControlStateNormal];
     
     self.chooseFromRemoteButton = [[Utils sharedInstance] customizeButton:self.chooseFromRemoteButton];
-    [self.chooseFromRemoteButton setTitle:@"Choose from remote" forState:UIControlStateNormal];
+    [self.chooseFromRemoteButton setTitle:NSLocalizedString(@"KStringChooseNearbyButtonTitle", nil) forState:UIControlStateNormal];
     
     self.addButton = [[Utils sharedInstance] customizeButton:self.addButton];
     [self.addButton setTitle:NSLocalizedString(@"KStringAddButtonTitle", nil) forState:UIControlStateNormal];

@@ -22,6 +22,8 @@
     NSMutableArray* foodInfos;
     BOOL fetchingFailed;
     CLLocationManager *locationManager;
+    int currentSelectedItem;
+    BOOL hasFetchedFoodInfo;
 }
 @end
 
@@ -96,8 +98,9 @@
 {
     self.spinButton.enabled = YES;
     NSDictionary *foodInfo = [foodInfos objectAtIndex:index.intValue];
+    currentSelectedItem = index.intValue;
     NSString *name = foodInfo[@"name"];
-    NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringChooseCompleteMessage", nil) ,name];
+    NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"KStringBussinessChooseCompleteMessage", nil) ,name];
     [self showMessage:msg  withTitle:NSLocalizedString(@"KStringChooseCompleteTitle", nil) ];
     
 }
@@ -108,7 +111,7 @@
                                                           message:msg
                                                          delegate:self
                                                 cancelButtonTitle:NSLocalizedString(@"KStringConfirm", nil)
-                                                otherButtonTitles:nil];
+                                                otherButtonTitles:NSLocalizedString(@"KStringGoToWebsite", nil),nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     alertView.messageLabel.textColor = [UIColor cloudsColor];
@@ -125,8 +128,19 @@
 - (void) alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     [self.foodPicker selectRow:0 inComponent:0 animated:YES];
+    if (buttonIndex == 1) {
+        NSDictionary *businessJSON = foodInfos[currentSelectedItem];
+        NSString *mobileURL = businessJSON[@"mobile_url"];
+        if (mobileURL) {
+            [self openWebSiteWithURL:mobileURL];
+        }
+    }
 }
 
+- (void) openWebSiteWithURL:(NSString *)url
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
 
 /*
  #pragma mark - Navigation
@@ -156,7 +170,6 @@
                     if (error) {
                         NSLog(@"An error happened during the request: %@", error);
                     } else if (businessJSON) {
-                        NSString *mobileURL = businessJSON[@"mobile_url"];
                         //NSLog(@"the mobile url for %@ is %@",name,mobileURL);
                         [foodInfos addObject:businessJSON];
                     } else {
@@ -196,34 +209,36 @@
     [locationManager stopUpdatingLocation];
     __block NSString *currentLocation;
     CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
-    [geoCoder reverseGeocodeLocation:newLocation
-                   completionHandler:^(NSArray *placemarks, NSError *error) {
-                       NSString *cityName = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
-                       NSString *state = placemarks.count ? [placemarks.firstObject administrativeArea] : @"Not Found";
-                       currentLocation = [NSString stringWithFormat:@"%@, %@",cityName,state];
-                       [self fetchBusinessInfoForLocation:currentLocation andCompletion:^(BOOL success) {
-                           if (success) {
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                   [self.foodPicker reloadAllComponents];
-                               });
-                           } else{
-                               fetchingFailed = YES;
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                   [self.foodPicker reloadAllComponents];
-                               });
-                           }
-                       }];
-                   }];
+    [geoCoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        NSString *cityName = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
+        NSString *state = placemarks.count ? [placemarks.firstObject administrativeArea] : @"Not Found";
+        currentLocation = [NSString stringWithFormat:@"%@, %@",cityName,state];
+        if (!hasFetchedFoodInfo) {
+            hasFetchedFoodInfo = YES;
+            [self fetchBusinessInfoForLocation:currentLocation andCompletion:^(BOOL success) {
+                if (success) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.foodPicker reloadAllComponents];
+                    });
+                } else{
+                    fetchingFailed = YES;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.foodPicker reloadAllComponents];
+                    });
+                }
+            }];
+
+        }
+    }];
+}
 //    NSLog(@"didUpdateToLocation: %@", newLocation);
 //    CLLocation *currentLocation = newLocation;
-//    
+//
 //    if (currentLocation != nil) {
 //        NSString *longtitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
 //        NSString *latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
 //    }
 //    [locationManager stopUpdatingLocation];
-}
-
 
 
 @end

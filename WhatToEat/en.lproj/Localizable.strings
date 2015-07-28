@@ -7,17 +7,20 @@
 */
 
 //Buttons
-"KStringChooseButtonTitle" = "Choose";
-"KStringAddButtonTitle" = "Add New Food";
+"KStringChooseButtonTitle" = "My list";
+"KStringChooseNearbyButtonTitle" = "Famous local";
+"KStringAddButtonTitle" = "Add new food";
 "KStringSpinButtonTitle" = "Spin！";
 
 //Alert Views
 "KStringChooseCompleteTitle" = "Yum";
 "KStringChooseCompleteMessage" = "Enjoy your %@ !";
+"KStringBussinessChooseCompleteMessage" = "Enjoy your food at %@ !";
 "KStringConfirmDeleteTitle" = "Clear";
 "KStringConfirmDeleteMessage" = "Are you sure you want to delete your list?";
-"KStringConfirm" = "Yes";
+"KStringConfirm" = "Ok";
 "KStringCancel" = "No";
+"KStringGoToWebsite" = "Website";
 
 //Navi Bars
 "KStringSpinViewTitle" = "What To Eat?";

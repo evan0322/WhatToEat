@@ -7,17 +7,20 @@
 */
 
 //Buttons
-"KStringChooseButtonTitle" = "选择";
+"KStringChooseButtonTitle" = "我的列表";
+"KStringChooseNearbyButtonTitle" = "我的周边";
 "KStringAddButtonTitle" = "添加食物种类";
 "KStringSpinButtonTitle" = "转动!";
 
 //Alert Views
 "KStringChooseCompleteTitle" = "搞定";
 "KStringChooseCompleteMessage" = "这顿就吃%@啦";
+"KStringBussinessChooseCompleteMessage" = "这顿就在%@吃啦 !";
 "KStringConfirmDeleteTitle" = "清空";
 "KStringConfirmDeleteMessage" = "确定清除整个列表?";
 "KStringConfirm" = "确定";
 "KStringCancel" = "取消";
+"KStringGoToWebsite" = "网站";
 
 //Navi Bars
 "KStringSpinViewTitle" = "今天吃什么?";

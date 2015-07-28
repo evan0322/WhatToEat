@@ -20,61 +20,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhatToEat/controllers/SpinFromRemoteViewController.m"
-            timestampString = "459315995.220774"
+            timestampString = "459743855.722218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatToEat/controllers/SpinFromRemoteViewController.m"
-            timestampString = "459315995.220774"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__81-[SpinFromRemoteViewController locationManager:didUpdateToLocation:fromLocation:]_block_invoke"
-                  moduleName = "whattoeat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/weixie/Documents/workspace/WhatToEat/WhatToEat/controllers/SpinFromRemoteViewController.m"
-                  timestampString = "459315995.663704"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "204"
-                  endingLineNumber = "204"
-                  offsetFromSymbolStart = "632">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__81-[SpinFromRemoteViewController locationManager:didUpdateToLocation:fromLocation:]_block_invoke_2"
-                  moduleName = "whattoeat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/weixie/Documents/workspace/WhatToEat/WhatToEat/controllers/SpinFromRemoteViewController.m"
-                  timestampString = "459315995.663897"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
